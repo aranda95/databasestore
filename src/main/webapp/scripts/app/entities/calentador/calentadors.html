@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="databasestoreApp.calentador.home.title">Calentadors</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="calentador.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="databasestoreApp.calentador.home.createLabel">Create new Calentador
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="databasestoreApp.calentador.modelo">Modelo</span></th>
+                    <th><span translate="databasestoreApp.calentador.gas">Gas</span></th>
+                    <th><span translate="databasestoreApp.calentador.litros">Litros</span></th>
+                    <th><span translate="databasestoreApp.calentador.cantidad">Cantidad</span></th>
+                    <th><span translate="databasestoreApp.calentador.producto">producto</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="calentador in calentadors track by calentador.id">
+                    <td><a ui-sref="calentador.detail({id:calentador.id})">{{calentador.id}}</a></td>
+                    <td>{{calentador.modelo}}</td>
+                    <td>{{calentador.gas}}</td>
+                    <td>{{calentador.litros}}</td>
+                    <td>{{calentador.cantidad}}</td>
+                    <td>
+                        <a ui-sref="producto.detail({id:calentador.producto.id})">{{calentador.producto.descripcion}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="calentador.detail({id:calentador.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="calentador.edit({id:calentador.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="calentador.delete({id:calentador.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

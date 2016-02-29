@@ -1,0 +1,25 @@
+{
+    "databasestoreApp": {
+        "teka" : {
+            "home": {
+                "title": "Tekas",
+                "createLabel": "Create a new Teka",
+                "createOrEditLabel": "Create or edit a Teka",
+                "search": "Search for Teka"
+            },
+            "created": "A new Teka is created with identifier {{ param }}",
+            "updated": "A Teka is updated with identifier {{ param }}",
+            "deleted": "A Teka is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Teka {{ id }}?"
+            },
+            "detail": {
+                "title": "Teka"
+            },
+            "tipo": "Tipo",
+            "modelo": "Modelo",
+            "cantidad": "Cantidad",
+            "producto": "Producto"
+        }
+    }
+}

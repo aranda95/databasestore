@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="databasestoreApp.calentador.detail.title">Calentador</span> {{calentador.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.calentador.modelo">Modelo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{calentador.modelo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.calentador.gas">Gas</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{calentador.gas}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.calentador.litros">Litros</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{calentador.litros}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.calentador.cantidad">Cantidad</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{calentador.cantidad}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.calentador.producto">producto</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="producto.detail({id:calentador.producto.id})">{{calentador.producto.descripcion}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

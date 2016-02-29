@@ -9,6 +9,7 @@
                 "main": "Entities",
                 "producto": "Producto",
                 "calentador": "Calentador",
+                "teka": "Teka",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

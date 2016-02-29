@@ -1,11 +1,31 @@
 {
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "calentador",
+            "otherEntityName": "calentador",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        }
+        {
+            "relationshipId": 2,
+            "relationshipName": "teka",
+            "otherEntityName": "teka",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        }
+    ],
     "fields": [
         {
             "fieldId": 1,
             "fieldName": "descripcion",
             "fieldType": "String"
         }
+
     ],
     "changelogDate": "20160229162856",
     "dto": "no",

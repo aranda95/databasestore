@@ -7,32 +7,27 @@
             "relationshipType": "one-to-one",
             "otherEntityField": "descripcion",
             "ownerSide": true,
-            "otherEntityRelationshipName": "calentador"
+            "otherEntityRelationshipName": "teka"
         }
     ],
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "modelo",
+            "fieldName": "tipo",
             "fieldType": "String"
         },
         {
             "fieldId": 2,
-            "fieldName": "gas",
+            "fieldName": "modelo",
             "fieldType": "String"
         },
         {
             "fieldId": 3,
-            "fieldName": "litros",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldId": 4,
             "fieldName": "cantidad",
             "fieldType": "Integer"
         }
     ],
-    "changelogDate": "20160229163018",
+    "changelogDate": "20160229184135",
     "dto": "no",
     "service": "no",
     "pagination": "no"

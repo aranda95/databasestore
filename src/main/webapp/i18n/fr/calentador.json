@@ -1,0 +1,27 @@
+{
+    "databasestoreApp": {
+        "calentador" : {
+            "home": {
+                "title": "Calentadors",
+                "createLabel": "Créer un nouveau Calentador",
+                "createOrEditLabel": "Créer ou éditer un Calentador",
+                "search": "Search for Calentador"
+            },
+            "created": "Un nouveau Calentador a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Calentador avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Calentador avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Calentador {{ id }} ?"
+            },
+            "detail": {
+                "title": "Calentador"
+            },
+            "modelo": "Modelo",
+            "gas": "Gas",
+            "litros": "Litros",
+            "cantidad": "Cantidad",
+            "producto": "Producto"
+        }
+    }
+}
+
