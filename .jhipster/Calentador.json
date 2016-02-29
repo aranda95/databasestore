@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producto",
+            "otherEntityName": "producto",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "calentador"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "modelo",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "gas",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "litros",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160229163018",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}
