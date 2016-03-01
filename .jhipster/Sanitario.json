@@ -1,0 +1,34 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producto",
+            "otherEntityName": "producto",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "descripcion",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "sanitario"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "modelo",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "medidas",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160301164751",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

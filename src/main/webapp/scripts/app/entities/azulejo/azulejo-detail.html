@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="databasestoreApp.azulejo.detail.title">Azulejo</span> {{azulejo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.azulejo.marca">Marca</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{azulejo.marca}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.azulejo.m2">M2</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{azulejo.m2}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.azulejo.descripcion">Descripcion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{azulejo.descripcion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.azulejo.producto">producto</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="producto.detail({id:azulejo.producto.id})">{{azulejo.producto.descripcion}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

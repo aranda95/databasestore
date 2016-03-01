@@ -18,6 +18,24 @@
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
         }
+        {
+            "relationshipId": 3,
+            "relationshipName": "sanitario",
+            "otherEntityName": "sanitario",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        }
+        {
+            "relationshipId": 4,
+            "relationshipName": "azulejo",
+            "otherEntityName": "azulejo",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        }
     ],
     "fields": [
         {

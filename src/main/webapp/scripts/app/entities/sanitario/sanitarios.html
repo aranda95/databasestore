@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="databasestoreApp.sanitario.home.title">Sanitarios</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="sanitario.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="databasestoreApp.sanitario.home.createLabel">Create new Sanitario
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="databasestoreApp.sanitario.modelo">Modelo</span></th>
+                    <th><span translate="databasestoreApp.sanitario.medidas">Medidas</span></th>
+                    <th><span translate="databasestoreApp.sanitario.cantidad">Cantidad</span></th>
+                    <th><span translate="databasestoreApp.sanitario.producto">producto</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sanitario in sanitarios track by sanitario.id">
+                    <td><a ui-sref="sanitario.detail({id:sanitario.id})">{{sanitario.id}}</a></td>
+                    <td>{{sanitario.modelo}}</td>
+                    <td>{{sanitario.medidas}}</td>
+                    <td>{{sanitario.cantidad}}</td>
+                    <td>
+                        <a ui-sref="producto.detail({id:sanitario.producto.id})">{{sanitario.producto.descripcion}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="sanitario.detail({id:sanitario.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="sanitario.edit({id:sanitario.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="sanitario.delete({id:sanitario.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

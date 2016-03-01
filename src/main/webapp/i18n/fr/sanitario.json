@@ -1,0 +1,26 @@
+{
+    "databasestoreApp": {
+        "sanitario" : {
+            "home": {
+                "title": "Sanitarios",
+                "createLabel": "Créer un nouveau Sanitario",
+                "createOrEditLabel": "Créer ou éditer un Sanitario",
+                "search": "Search for Sanitario"
+            },
+            "created": "Un nouveau Sanitario a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Sanitario avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Sanitario avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Sanitario {{ id }} ?"
+            },
+            "detail": {
+                "title": "Sanitario"
+            },
+            "modelo": "Modelo",
+            "medidas": "Medidas",
+            "cantidad": "Cantidad",
+            "producto": "Producto"
+        }
+    }
+}
+

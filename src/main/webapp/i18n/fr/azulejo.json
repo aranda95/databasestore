@@ -1,0 +1,26 @@
+{
+    "databasestoreApp": {
+        "azulejo" : {
+            "home": {
+                "title": "Azulejos",
+                "createLabel": "Créer un nouveau Azulejo",
+                "createOrEditLabel": "Créer ou éditer un Azulejo",
+                "search": "Search for Azulejo"
+            },
+            "created": "Un nouveau Azulejo a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Azulejo avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Azulejo avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Azulejo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Azulejo"
+            },
+            "marca": "Marca",
+            "m2": "M2",
+            "descripcion": "Descripcion",
+            "producto": "Producto"
+        }
+    }
+}
+

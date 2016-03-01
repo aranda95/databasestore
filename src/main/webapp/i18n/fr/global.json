@@ -10,6 +10,8 @@
                 "producto": "Producto",
                 "calentador": "Calentador",
                 "teka": "Teka",
+                "sanitario": "Sanitario",
+                "azulejo": "Azulejo",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

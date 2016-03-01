@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="databasestoreApp.azulejo.home.title">Azulejos</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="azulejo.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="databasestoreApp.azulejo.home.createLabel">Create new Azulejo
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="databasestoreApp.azulejo.marca">Marca</span></th>
+                    <th><span translate="databasestoreApp.azulejo.m2">M2</span></th>
+                    <th><span translate="databasestoreApp.azulejo.descripcion">Descripcion</span></th>
+                    <th><span translate="databasestoreApp.azulejo.producto">producto</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="azulejo in azulejos track by azulejo.id">
+                    <td><a ui-sref="azulejo.detail({id:azulejo.id})">{{azulejo.id}}</a></td>
+                    <td>{{azulejo.marca}}</td>
+                    <td>{{azulejo.m2}}</td>
+                    <td>{{azulejo.descripcion}}</td>
+                    <td>
+                        <a ui-sref="producto.detail({id:azulejo.producto.id})">{{azulejo.producto.descripcion}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="azulejo.detail({id:azulejo.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="azulejo.edit({id:azulejo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="azulejo.delete({id:azulejo.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
