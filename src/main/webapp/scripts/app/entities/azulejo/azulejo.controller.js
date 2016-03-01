@@ -21,7 +21,7 @@ angular.module('databasestoreApp')
             $scope.azulejo = {
                 marca: null,
                 m2: null,
-                descripcion: null,
+                comentario: null,
                 id: null
             };
         };

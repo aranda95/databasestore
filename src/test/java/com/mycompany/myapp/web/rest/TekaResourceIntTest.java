@@ -29,6 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.mycompany.myapp.domain.enumeration.Tipo;
 
 /**
  * Test class for the TekaResource REST controller.
@@ -41,13 +42,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @IntegrationTest
 public class TekaResourceIntTest {
 
-    private static final String DEFAULT_TIPO = "AAAAA";
-    private static final String UPDATED_TIPO = "BBBBB";
+    
+    private static final Tipo DEFAULT_TIPO = Tipo.Hornos;
+    private static final Tipo UPDATED_TIPO = Tipo.Encimeras;
     private static final String DEFAULT_MODELO = "AAAAA";
     private static final String UPDATED_MODELO = "BBBBB";
 
     private static final Integer DEFAULT_CANTIDAD = 1;
     private static final Integer UPDATED_CANTIDAD = 2;
+    private static final String DEFAULT_COMENTARIO = "AAAAA";
+    private static final String UPDATED_COMENTARIO = "BBBBB";
 
     @Inject
     private TekaRepository tekaRepository;
@@ -78,6 +82,7 @@ public class TekaResourceIntTest {
         teka.setTipo(DEFAULT_TIPO);
         teka.setModelo(DEFAULT_MODELO);
         teka.setCantidad(DEFAULT_CANTIDAD);
+        teka.setComentario(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -99,6 +104,7 @@ public class TekaResourceIntTest {
         assertThat(testTeka.getTipo()).isEqualTo(DEFAULT_TIPO);
         assertThat(testTeka.getModelo()).isEqualTo(DEFAULT_MODELO);
         assertThat(testTeka.getCantidad()).isEqualTo(DEFAULT_CANTIDAD);
+        assertThat(testTeka.getComentario()).isEqualTo(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -114,7 +120,8 @@ public class TekaResourceIntTest {
                 .andExpect(jsonPath("$.[*].id").value(hasItem(teka.getId().intValue())))
                 .andExpect(jsonPath("$.[*].tipo").value(hasItem(DEFAULT_TIPO.toString())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
-                .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)));
+                .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
+                .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
     }
 
     @Test
@@ -130,7 +137,8 @@ public class TekaResourceIntTest {
             .andExpect(jsonPath("$.id").value(teka.getId().intValue()))
             .andExpect(jsonPath("$.tipo").value(DEFAULT_TIPO.toString()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
-            .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD));
+            .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
+            .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
     }
 
     @Test
@@ -153,6 +161,7 @@ public class TekaResourceIntTest {
         teka.setTipo(UPDATED_TIPO);
         teka.setModelo(UPDATED_MODELO);
         teka.setCantidad(UPDATED_CANTIDAD);
+        teka.setComentario(UPDATED_COMENTARIO);
 
         restTekaMockMvc.perform(put("/api/tekas")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -166,6 +175,7 @@ public class TekaResourceIntTest {
         assertThat(testTeka.getTipo()).isEqualTo(UPDATED_TIPO);
         assertThat(testTeka.getModelo()).isEqualTo(UPDATED_MODELO);
         assertThat(testTeka.getCantidad()).isEqualTo(UPDATED_CANTIDAD);
+        assertThat(testTeka.getComentario()).isEqualTo(UPDATED_COMENTARIO);
     }
 
     @Test

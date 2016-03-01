@@ -1,0 +1,27 @@
+{
+    "databasestoreApp": {
+        "plato" : {
+            "home": {
+                "title": "Platos",
+                "createLabel": "Create a new Plato",
+                "createOrEditLabel": "Create or edit a Plato",
+                "search": "Search for Plato"
+            },
+            "created": "A new Plato is created with identifier {{ param }}",
+            "updated": "A Plato is updated with identifier {{ param }}",
+            "deleted": "A Plato is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Plato {{ id }}?"
+            },
+            "detail": {
+                "title": "Plato"
+            },
+            "marca": "Marca",
+            "color": "Color",
+            "medidas": "Medidas",
+            "comentario": "Comentario",
+            "cantidad": "Cantidad",
+            "producto": "Producto"
+        }
+    }
+}

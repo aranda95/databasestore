@@ -23,7 +23,7 @@
         },
         {
             "fieldId": 3,
-            "fieldName": "descripcion",
+            "fieldName": "comentario",
             "fieldType": "String"
         }
     ],

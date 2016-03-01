@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="databasestoreApp.saco.detail.title">Saco</span> {{saco.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.saco.modelo">Modelo</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'databasestoreApp.Modelo.' + saco.modelo}}">{{saco.modelo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.saco.cantidad">Cantidad</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{saco.cantidad}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.saco.comentario">Comentario</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{saco.comentario}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.saco.producto">producto</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="producto.detail({id:saco.producto.id})">{{saco.producto.descripcion}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

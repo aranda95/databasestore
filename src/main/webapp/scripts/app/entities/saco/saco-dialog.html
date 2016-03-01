@@ -1,0 +1,51 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="mySacoLabel" translate="databasestoreApp.saco.home.createOrEditLabel">Create or edit a Saco</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="saco.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="databasestoreApp.saco.modelo" for="field_modelo">Modelo</label>
+            <select class="form-control" name="modelo" ng-model="saco.modelo" id="field_modelo">
+                <option value="minicontainer" translate="databasestoreApp.Modelo.minicontainer">minicontainer</option>
+                <option value="runa" translate="databasestoreApp.Modelo.runa">runa</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="databasestoreApp.saco.cantidad" for="field_cantidad">Cantidad</label>
+            <input type="number" class="form-control" name="cantidad" id="field_cantidad"
+                    ng-model="saco.cantidad"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="databasestoreApp.saco.comentario" for="field_comentario">Comentario</label>
+            <input type="text" class="form-control" name="comentario" id="field_comentario"
+                    ng-model="saco.comentario"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="databasestoreApp.saco.producto" for="field_producto">producto</label>
+            <select class="form-control" id="field_producto" name="producto" ng-model="saco.producto" ng-options="producto as producto.descripcion for producto in productos | orderBy:'id' track by producto.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

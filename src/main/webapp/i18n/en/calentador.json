@@ -20,6 +20,7 @@
             "gas": "Gas",
             "litros": "Litros",
             "cantidad": "Cantidad",
+            "comentario": "Comentario",
             "producto": "Producto"
         }
     }

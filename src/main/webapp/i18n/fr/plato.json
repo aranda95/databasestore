@@ -1,0 +1,28 @@
+{
+    "databasestoreApp": {
+        "plato" : {
+            "home": {
+                "title": "Platos",
+                "createLabel": "Créer un nouveau Plato",
+                "createOrEditLabel": "Créer ou éditer un Plato",
+                "search": "Search for Plato"
+            },
+            "created": "Un nouveau Plato a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Plato avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Plato avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Plato {{ id }} ?"
+            },
+            "detail": {
+                "title": "Plato"
+            },
+            "marca": "Marca",
+            "color": "Color",
+            "medidas": "Medidas",
+            "comentario": "Comentario",
+            "cantidad": "Cantidad",
+            "producto": "Producto"
+        }
+    }
+}
+

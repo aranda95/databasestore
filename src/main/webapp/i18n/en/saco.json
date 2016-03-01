@@ -1,0 +1,25 @@
+{
+    "databasestoreApp": {
+        "saco" : {
+            "home": {
+                "title": "Sacos",
+                "createLabel": "Create a new Saco",
+                "createOrEditLabel": "Create or edit a Saco",
+                "search": "Search for Saco"
+            },
+            "created": "A new Saco is created with identifier {{ param }}",
+            "updated": "A Saco is updated with identifier {{ param }}",
+            "deleted": "A Saco is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Saco {{ id }}?"
+            },
+            "detail": {
+                "title": "Saco"
+            },
+            "modelo": "Modelo",
+            "cantidad": "Cantidad",
+            "comentario": "Comentario",
+            "producto": "Producto"
+        }
+    }
+}

@@ -27,6 +27,9 @@ public class Sanitario implements Serializable {
     @Column(name = "cantidad")
     private Integer cantidad;
     
+    @Column(name = "comentario")
+    private String comentario;
+    
     @OneToOne
     private Producto producto;
 
@@ -60,6 +63,14 @@ public class Sanitario implements Serializable {
     
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+    
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
     public Producto getProducto() {
@@ -97,6 +108,7 @@ public class Sanitario implements Serializable {
             ", modelo='" + modelo + "'" +
             ", medidas='" + medidas + "'" +
             ", cantidad='" + cantidad + "'" +
+            ", comentario='" + comentario + "'" +
             '}';
     }
 }

@@ -30,6 +30,9 @@ public class Calentador implements Serializable {
     @Column(name = "cantidad")
     private Integer cantidad;
     
+    @Column(name = "comentario")
+    private String comentario;
+    
     @OneToOne
     private Producto producto;
 
@@ -73,6 +76,14 @@ public class Calentador implements Serializable {
         this.cantidad = cantidad;
     }
 
+    public String getComentario() {
+        return comentario;
+    }
+    
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
     public Producto getProducto() {
         return producto;
     }
@@ -109,6 +120,7 @@ public class Calentador implements Serializable {
             ", gas='" + gas + "'" +
             ", litros='" + litros + "'" +
             ", cantidad='" + cantidad + "'" +
+            ", comentario='" + comentario + "'" +
             '}';
     }
 }

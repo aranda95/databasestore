@@ -24,8 +24,8 @@ public class Azulejo implements Serializable {
     @Column(name = "m2")
     private Integer m2;
     
-    @Column(name = "descripcion")
-    private String descripcion;
+    @Column(name = "comentario")
+    private String comentario;
     
     @OneToOne
     private Producto producto;
@@ -54,12 +54,12 @@ public class Azulejo implements Serializable {
         this.m2 = m2;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getComentario() {
+        return comentario;
     }
     
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
     public Producto getProducto() {
@@ -96,7 +96,7 @@ public class Azulejo implements Serializable {
             "id=" + id +
             ", marca='" + marca + "'" +
             ", m2='" + m2 + "'" +
-            ", descripcion='" + descripcion + "'" +
+            ", comentario='" + comentario + "'" +
             '}';
     }
 }

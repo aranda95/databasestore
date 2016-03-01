@@ -1,0 +1,35 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producto",
+            "otherEntityName": "producto",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "descripcion",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "grifo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "seccion",
+            "fieldType": "Seccion",
+            "fieldValues": "banera,columnas,cocina,monomandos,varios"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "comentario",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160301185450",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

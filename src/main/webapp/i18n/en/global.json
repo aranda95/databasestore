@@ -12,6 +12,9 @@
                 "teka": "Teka",
                 "sanitario": "Sanitario",
                 "azulejo": "Azulejo",
+                "plato": "Plato",
+                "saco": "Saco",
+                "grifo": "Grifo",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

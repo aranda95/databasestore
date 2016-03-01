@@ -27,6 +27,8 @@
             
             <column name="cantidad" type="integer"/>
             
+            <column name="comentario" type="varchar(255)"/>
+            
             <column name="producto_id" type="bigint">
                 <constraints unique="true"/>
             </column>

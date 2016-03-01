@@ -1,0 +1,35 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producto",
+            "otherEntityName": "producto",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "descripcion",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "saco"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "modelo",
+            "fieldType": "Modelo",
+            "fieldValues": "minicontainer,runa"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "comentario",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160301183241",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

@@ -22,6 +22,7 @@ angular.module('databasestoreApp')
                 modelo: null,
                 medidas: null,
                 cantidad: null,
+                comentario: null,
                 id: null
             };
         };

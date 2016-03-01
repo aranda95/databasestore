@@ -25,7 +25,7 @@
             
             <column name="m2" type="integer"/>
             
-            <column name="descripcion" type="varchar(255)"/>
+            <column name="comentario" type="varchar(255)"/>
             
             <column name="producto_id" type="bigint">
                 <constraints unique="true"/>

@@ -1,0 +1,44 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producto",
+            "otherEntityName": "producto",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "descripcion",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "plato"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "marca",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "color",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "medidas",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "comentario",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160301182116",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

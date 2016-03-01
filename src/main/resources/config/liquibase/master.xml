@@ -10,5 +10,8 @@
     <include file="classpath:config/liquibase/changelog/20160229184135_added_entity_Teka.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160301164751_added_entity_Sanitario.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160301165940_added_entity_Azulejo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160301182116_added_entity_Plato.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160301183241_added_entity_Saco.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160301185450_added_entity_Grifo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

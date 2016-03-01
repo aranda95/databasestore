@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="databasestoreApp.grifo.detail.title">Grifo</span> {{grifo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.grifo.seccion">Seccion</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'databasestoreApp.Seccion.' + grifo.seccion}}">{{grifo.seccion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.grifo.cantidad">Cantidad</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{grifo.cantidad}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.grifo.comentario">Comentario</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{grifo.comentario}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="databasestoreApp.grifo.producto">producto</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="producto.detail({id:grifo.producto.id})">{{grifo.producto.descripcion}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

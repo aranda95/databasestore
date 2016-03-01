@@ -1,0 +1,12 @@
+{
+    "databasestoreApp": {
+        "Seccion" : {
+            "null": "",
+            "banera": "banera",
+            "columnas": "columnas",
+            "cocina": "cocina",
+            "monomandos": "monomandos",
+            "varios": "varios"
+        }
+    }
+}

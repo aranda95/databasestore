@@ -67,7 +67,7 @@ class AzulejoGatlingTest extends Simulation {
             .exec(http("Create new azulejo")
             .post("/api/azulejos")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "marca":"SAMPLE_TEXT", "m2":"0", "descripcion":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "marca":"SAMPLE_TEXT", "m2":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_azulejo_url")))
             .pause(10)

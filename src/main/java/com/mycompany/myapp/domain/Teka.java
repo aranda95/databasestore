@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
+import com.mycompany.myapp.domain.enumeration.Tipo;
+
 /**
  * A Teka.
  */
@@ -18,14 +20,18 @@ public class Teka implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private String tipo;
+    private Tipo tipo;
     
     @Column(name = "modelo")
     private String modelo;
     
     @Column(name = "cantidad")
     private Integer cantidad;
+    
+    @Column(name = "comentario")
+    private String comentario;
     
     @OneToOne
     private Producto producto;
@@ -38,11 +44,11 @@ public class Teka implements Serializable {
         this.id = id;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
     
-    public void setTipo(String tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 
@@ -60,6 +66,14 @@ public class Teka implements Serializable {
     
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+    
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
     public Producto getProducto() {
@@ -97,6 +111,7 @@ public class Teka implements Serializable {
             ", tipo='" + tipo + "'" +
             ", modelo='" + modelo + "'" +
             ", cantidad='" + cantidad + "'" +
+            ", comentario='" + comentario + "'" +
             '}';
     }
 }

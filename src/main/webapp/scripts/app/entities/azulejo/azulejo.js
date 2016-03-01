@@ -63,7 +63,7 @@ angular.module('databasestoreApp')
                                 return {
                                     marca: null,
                                     m2: null,
-                                    descripcion: null,
+                                    comentario: null,
                                     id: null
                                 };
                             }

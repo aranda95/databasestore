@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="databasestoreApp.grifo.home.title">Grifos</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="grifo.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="databasestoreApp.grifo.home.createLabel">Create new Grifo
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="databasestoreApp.grifo.seccion">Seccion</span></th>
+                    <th><span translate="databasestoreApp.grifo.cantidad">Cantidad</span></th>
+                    <th><span translate="databasestoreApp.grifo.comentario">Comentario</span></th>
+                    <th><span translate="databasestoreApp.grifo.producto">producto</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="grifo in grifos track by grifo.id">
+                    <td><a ui-sref="grifo.detail({id:grifo.id})">{{grifo.id}}</a></td>
+                    <td translate="{{'databasestoreApp.Seccion.' + grifo.seccion}}">{{grifo.seccion}}</td>
+                    <td>{{grifo.cantidad}}</td>
+                    <td>{{grifo.comentario}}</td>
+                    <td>
+                        <a ui-sref="producto.detail({id:grifo.producto.id})">{{grifo.producto.descripcion}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="grifo.detail({id:grifo.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="grifo.edit({id:grifo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="grifo.delete({id:grifo.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

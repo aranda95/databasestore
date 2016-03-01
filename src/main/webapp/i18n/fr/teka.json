@@ -19,6 +19,7 @@
             "tipo": "Tipo",
             "modelo": "Modelo",
             "cantidad": "Cantidad",
+            "comentario": "Comentario",
             "producto": "Producto"
         }
     }

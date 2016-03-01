@@ -1,0 +1,25 @@
+{
+    "databasestoreApp": {
+        "grifo" : {
+            "home": {
+                "title": "Grifos",
+                "createLabel": "Create a new Grifo",
+                "createOrEditLabel": "Create or edit a Grifo",
+                "search": "Search for Grifo"
+            },
+            "created": "A new Grifo is created with identifier {{ param }}",
+            "updated": "A Grifo is updated with identifier {{ param }}",
+            "deleted": "A Grifo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Grifo {{ id }}?"
+            },
+            "detail": {
+                "title": "Grifo"
+            },
+            "seccion": "Seccion",
+            "cantidad": "Cantidad",
+            "comentario": "Comentario",
+            "producto": "Producto"
+        }
+    }
+}

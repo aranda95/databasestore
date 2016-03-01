@@ -19,6 +19,7 @@
             "modelo": "Modelo",
             "medidas": "Medidas",
             "cantidad": "Cantidad",
+            "comentario": "Comentario",
             "producto": "Producto"
         }
     }

@@ -15,9 +15,12 @@
         </div>
         <div class="form-group">
             <label class="control-label" translate="databasestoreApp.teka.tipo" for="field_tipo">Tipo</label>
-            <input type="text" class="form-control" name="tipo" id="field_tipo"
-                    ng-model="teka.tipo"
-                     />
+            <select class="form-control" name="tipo" ng-model="teka.tipo" id="field_tipo">
+                <option value="Hornos" translate="databasestoreApp.Tipo.Hornos">Hornos</option>
+                <option value="Encimeras" translate="databasestoreApp.Tipo.Encimeras">Encimeras</option>
+                <option value="Campanas" translate="databasestoreApp.Tipo.Campanas">Campanas</option>
+                <option value="Fregaderas" translate="databasestoreApp.Tipo.Fregaderas">Fregaderas</option>
+            </select>
         </div>
         <div class="form-group">
             <label class="control-label" translate="databasestoreApp.teka.modelo" for="field_modelo">Modelo</label>
@@ -29,6 +32,12 @@
             <label class="control-label" translate="databasestoreApp.teka.cantidad" for="field_cantidad">Cantidad</label>
             <input type="number" class="form-control" name="cantidad" id="field_cantidad"
                     ng-model="teka.cantidad"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="databasestoreApp.teka.comentario" for="field_comentario">Comentario</label>
+            <input type="text" class="form-control" name="comentario" id="field_comentario"
+                    ng-model="teka.comentario"
                      />
         </div>
 

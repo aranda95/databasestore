@@ -65,6 +65,7 @@ angular.module('databasestoreApp')
                                     gas: null,
                                     litros: null,
                                     cantidad: null,
+                                    comentario: null,
                                     id: null
                                 };
                             }

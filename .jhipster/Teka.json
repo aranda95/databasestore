@@ -14,7 +14,8 @@
         {
             "fieldId": 1,
             "fieldName": "tipo",
-            "fieldType": "String"
+            "fieldType": "Tipo",
+            "fieldValues": "Hornos,Encimeras,Campanas,Fregaderas"
         },
         {
             "fieldId": 2,
@@ -25,7 +26,14 @@
             "fieldId": 3,
             "fieldName": "cantidad",
             "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "comentario",
+            "fieldType": "String"
         }
+
+
     ],
     "changelogDate": "20160229184135",
     "dto": "no",

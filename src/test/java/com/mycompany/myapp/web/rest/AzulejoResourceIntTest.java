@@ -46,8 +46,8 @@ public class AzulejoResourceIntTest {
 
     private static final Integer DEFAULT_M2 = 1;
     private static final Integer UPDATED_M2 = 2;
-    private static final String DEFAULT_DESCRIPCION = "AAAAA";
-    private static final String UPDATED_DESCRIPCION = "BBBBB";
+    private static final String DEFAULT_COMENTARIO = "AAAAA";
+    private static final String UPDATED_COMENTARIO = "BBBBB";
 
     @Inject
     private AzulejoRepository azulejoRepository;
@@ -77,7 +77,7 @@ public class AzulejoResourceIntTest {
         azulejo = new Azulejo();
         azulejo.setMarca(DEFAULT_MARCA);
         azulejo.setm2(DEFAULT_M2);
-        azulejo.setDescripcion(DEFAULT_DESCRIPCION);
+        azulejo.setComentario(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -98,7 +98,7 @@ public class AzulejoResourceIntTest {
         Azulejo testAzulejo = azulejos.get(azulejos.size() - 1);
         assertThat(testAzulejo.getMarca()).isEqualTo(DEFAULT_MARCA);
         assertThat(testAzulejo.getm2()).isEqualTo(DEFAULT_M2);
-        assertThat(testAzulejo.getDescripcion()).isEqualTo(DEFAULT_DESCRIPCION);
+        assertThat(testAzulejo.getComentario()).isEqualTo(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -114,7 +114,7 @@ public class AzulejoResourceIntTest {
                 .andExpect(jsonPath("$.[*].id").value(hasItem(azulejo.getId().intValue())))
                 .andExpect(jsonPath("$.[*].marca").value(hasItem(DEFAULT_MARCA.toString())))
                 .andExpect(jsonPath("$.[*].m2").value(hasItem(DEFAULT_M2)))
-                .andExpect(jsonPath("$.[*].descripcion").value(hasItem(DEFAULT_DESCRIPCION.toString())));
+                .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
     }
 
     @Test
@@ -130,7 +130,7 @@ public class AzulejoResourceIntTest {
             .andExpect(jsonPath("$.id").value(azulejo.getId().intValue()))
             .andExpect(jsonPath("$.marca").value(DEFAULT_MARCA.toString()))
             .andExpect(jsonPath("$.m2").value(DEFAULT_M2))
-            .andExpect(jsonPath("$.descripcion").value(DEFAULT_DESCRIPCION.toString()));
+            .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
     }
 
     @Test
@@ -152,7 +152,7 @@ public class AzulejoResourceIntTest {
         // Update the azulejo
         azulejo.setMarca(UPDATED_MARCA);
         azulejo.setm2(UPDATED_M2);
-        azulejo.setDescripcion(UPDATED_DESCRIPCION);
+        azulejo.setComentario(UPDATED_COMENTARIO);
 
         restAzulejoMockMvc.perform(put("/api/azulejos")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -165,7 +165,7 @@ public class AzulejoResourceIntTest {
         Azulejo testAzulejo = azulejos.get(azulejos.size() - 1);
         assertThat(testAzulejo.getMarca()).isEqualTo(UPDATED_MARCA);
         assertThat(testAzulejo.getm2()).isEqualTo(UPDATED_M2);
-        assertThat(testAzulejo.getDescripcion()).isEqualTo(UPDATED_DESCRIPCION);
+        assertThat(testAzulejo.getComentario()).isEqualTo(UPDATED_COMENTARIO);
     }
 
     @Test

@@ -19,6 +19,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('teka');
+                        $translatePartialLoader.addPart('tipo');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]
@@ -40,6 +41,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('teka');
+                        $translatePartialLoader.addPart('tipo');
                         return $translate.refresh();
                     }],
                     entity: ['$stateParams', 'Teka', function($stateParams, Teka) {
@@ -64,6 +66,7 @@ angular.module('databasestoreApp')
                                     tipo: null,
                                     modelo: null,
                                     cantidad: null,
+                                    comentario: null,
                                     id: null
                                 };
                             }

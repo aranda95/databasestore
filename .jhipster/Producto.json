@@ -8,7 +8,7 @@
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
-        }
+        },
         {
             "relationshipId": 2,
             "relationshipName": "teka",
@@ -17,7 +17,7 @@
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
-        }
+        },
         {
             "relationshipId": 3,
             "relationshipName": "sanitario",
@@ -26,11 +26,38 @@
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
-        }
+        },
         {
             "relationshipId": 4,
             "relationshipName": "azulejo",
             "otherEntityName": "azulejo",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "plato",
+            "otherEntityName": "plato",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        },
+        {
+            "relationshipId": 6,
+            "relationshipName": "saco",
+            "otherEntityName": "saco",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "producto"
+        },
+        {
+            "relationshipId": 7,
+            "relationshipName": "grifo",
+            "otherEntityName": "grifo",
             "relationshipType": "one-to-one",
             "otherEntityField": "id",
             "ownerSide": false,

@@ -51,6 +51,8 @@ public class CalentadorResourceIntTest {
 
     private static final Integer DEFAULT_CANTIDAD = 1;
     private static final Integer UPDATED_CANTIDAD = 2;
+    private static final String DEFAULT_COMENTARIO = "AAAAA";
+    private static final String UPDATED_COMENTARIO = "BBBBB";
 
     @Inject
     private CalentadorRepository calentadorRepository;
@@ -82,6 +84,7 @@ public class CalentadorResourceIntTest {
         calentador.setGas(DEFAULT_GAS);
         calentador.setLitros(DEFAULT_LITROS);
         calentador.setCantidad(DEFAULT_CANTIDAD);
+        calentador.setComentario(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -104,6 +107,7 @@ public class CalentadorResourceIntTest {
         assertThat(testCalentador.getGas()).isEqualTo(DEFAULT_GAS);
         assertThat(testCalentador.getLitros()).isEqualTo(DEFAULT_LITROS);
         assertThat(testCalentador.getCantidad()).isEqualTo(DEFAULT_CANTIDAD);
+        assertThat(testCalentador.getComentario()).isEqualTo(DEFAULT_COMENTARIO);
     }
 
     @Test
@@ -120,7 +124,8 @@ public class CalentadorResourceIntTest {
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
                 .andExpect(jsonPath("$.[*].gas").value(hasItem(DEFAULT_GAS.toString())))
                 .andExpect(jsonPath("$.[*].litros").value(hasItem(DEFAULT_LITROS)))
-                .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)));
+                .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
+                .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
     }
 
     @Test
@@ -137,7 +142,8 @@ public class CalentadorResourceIntTest {
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
             .andExpect(jsonPath("$.gas").value(DEFAULT_GAS.toString()))
             .andExpect(jsonPath("$.litros").value(DEFAULT_LITROS))
-            .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD));
+            .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
+            .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
     }
 
     @Test
@@ -161,6 +167,7 @@ public class CalentadorResourceIntTest {
         calentador.setGas(UPDATED_GAS);
         calentador.setLitros(UPDATED_LITROS);
         calentador.setCantidad(UPDATED_CANTIDAD);
+        calentador.setComentario(UPDATED_COMENTARIO);
 
         restCalentadorMockMvc.perform(put("/api/calentadors")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -175,6 +182,7 @@ public class CalentadorResourceIntTest {
         assertThat(testCalentador.getGas()).isEqualTo(UPDATED_GAS);
         assertThat(testCalentador.getLitros()).isEqualTo(UPDATED_LITROS);
         assertThat(testCalentador.getCantidad()).isEqualTo(UPDATED_CANTIDAD);
+        assertThat(testCalentador.getComentario()).isEqualTo(UPDATED_COMENTARIO);
     }
 
     @Test

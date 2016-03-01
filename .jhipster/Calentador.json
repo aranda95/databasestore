@@ -30,6 +30,11 @@
             "fieldId": 4,
             "fieldName": "cantidad",
             "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "comentario",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20160229163018",
