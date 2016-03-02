@@ -4,7 +4,7 @@ describe('Controller Tests', function() {
 
     describe('Producto Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockProducto, MockCalentador;
+        var MockEntity, MockProducto, MockCalentador, MockTeka, MockSanitario, MockAzulejo, MockPlato, MockSaco, MockGrifo;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -13,6 +13,12 @@ describe('Controller Tests', function() {
             MockEntity = jasmine.createSpy('MockEntity');
             MockProducto = jasmine.createSpy('MockProducto');
             MockCalentador = jasmine.createSpy('MockCalentador');
+            MockTeka = jasmine.createSpy('MockTeka');
+            MockSanitario = jasmine.createSpy('MockSanitario');
+            MockAzulejo = jasmine.createSpy('MockAzulejo');
+            MockPlato = jasmine.createSpy('MockPlato');
+            MockSaco = jasmine.createSpy('MockSaco');
+            MockGrifo = jasmine.createSpy('MockGrifo');
             
 
             var locals = {
@@ -20,7 +26,13 @@ describe('Controller Tests', function() {
                 '$rootScope': $rootScope,
                 'entity': MockEntity ,
                 'Producto': MockProducto,
-                'Calentador': MockCalentador
+                'Calentador': MockCalentador,
+                'Teka': MockTeka,
+                'Sanitario': MockSanitario,
+                'Azulejo': MockAzulejo,
+                'Plato': MockPlato,
+                'Saco': MockSaco,
+                'Grifo': MockGrifo
             };
             createController = function() {
                 $injector.get('$controller')("ProductoDetailController", locals);

@@ -4,7 +4,7 @@
             "relationshipId": 1,
             "relationshipName": "producto",
             "otherEntityName": "producto",
-            "relationshipType": "one-to-one",
+            "relationshipType": "many-to-one",
             "otherEntityField": "descripcion",
             "ownerSide": true,
             "otherEntityRelationshipName": "calentador"

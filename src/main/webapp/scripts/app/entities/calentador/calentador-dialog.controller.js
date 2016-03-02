@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('CalentadorDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Calentador', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Calentador, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Calentador', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Calentador, Producto) {
 
         $scope.calentador = entity;
-        $scope.productos = Producto.query({filter: 'calentador-is-null'});
-        $q.all([$scope.calentador.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.calentador.producto || !$scope.calentador.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.calentador.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Calentador.get({id : id}, function(result) {
                 $scope.calentador = result;

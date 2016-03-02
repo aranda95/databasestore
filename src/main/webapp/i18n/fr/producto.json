@@ -17,7 +17,13 @@
                 "title": "Producto"
             },
             "descripcion": "Descripcion",
-            "calentador": "Calentador"
+            "calentador": "Calentador",
+            "teka": "Teka",
+            "sanitario": "Sanitario",
+            "azulejo": "Azulejo",
+            "plato": "Plato",
+            "saco": "Saco",
+            "grifo": "Grifo"
         }
     }
 }

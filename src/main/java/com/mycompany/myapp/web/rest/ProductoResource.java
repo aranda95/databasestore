@@ -76,11 +76,39 @@ public class ProductoResource {
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
     public List<Producto> getAllProductos(@RequestParam(required = false) String filter) {
-        if ("calentador-is-null".equals(filter)) {
-            log.debug("REST request to get all Productos where calentador is null");
+        if ("sanitario-is-null".equals(filter)) {
+            log.debug("REST request to get all Productos where sanitario is null");
             return StreamSupport
                 .stream(productoRepository.findAll().spliterator(), false)
-                .filter(producto -> producto.getCalentador() == null)
+                .filter(producto -> producto.getSanitario() == null)
+                .collect(Collectors.toList());
+        }
+        if ("azulejo-is-null".equals(filter)) {
+            log.debug("REST request to get all Productos where azulejo is null");
+            return StreamSupport
+                .stream(productoRepository.findAll().spliterator(), false)
+                .filter(producto -> producto.getAzulejo() == null)
+                .collect(Collectors.toList());
+        }
+        if ("plato-is-null".equals(filter)) {
+            log.debug("REST request to get all Productos where plato is null");
+            return StreamSupport
+                .stream(productoRepository.findAll().spliterator(), false)
+                .filter(producto -> producto.getPlato() == null)
+                .collect(Collectors.toList());
+        }
+        if ("saco-is-null".equals(filter)) {
+            log.debug("REST request to get all Productos where saco is null");
+            return StreamSupport
+                .stream(productoRepository.findAll().spliterator(), false)
+                .filter(producto -> producto.getSaco() == null)
+                .collect(Collectors.toList());
+        }
+        if ("grifo-is-null".equals(filter)) {
+            log.debug("REST request to get all Productos where grifo is null");
+            return StreamSupport
+                .stream(productoRepository.findAll().spliterator(), false)
+                .filter(producto -> producto.getGrifo() == null)
                 .collect(Collectors.toList());
         }
         log.debug("REST request to get all Productos");

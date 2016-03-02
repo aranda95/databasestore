@@ -4,7 +4,7 @@
             "relationshipId": 1,
             "relationshipName": "calentador",
             "otherEntityName": "calentador",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
@@ -13,7 +13,7 @@
             "relationshipId": 2,
             "relationshipName": "teka",
             "otherEntityName": "teka",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
