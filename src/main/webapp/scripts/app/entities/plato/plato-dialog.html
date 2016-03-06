@@ -46,7 +46,7 @@
 
         <div class="form-group">
             <label translate="databasestoreApp.plato.producto" for="field_producto">producto</label>
-            <select class="form-control" id="field_producto" name="producto" ng-model="plato.producto" ng-options="producto as producto.descripcion for producto in productos | orderBy:'id' track by producto.id">
+            <select class="form-control" id="field_producto" name="producto" ng-model="plato.producto" ng-options="producto as producto.descripcion for producto in productos track by producto.id">
                 <option value=""></option>
             </select>
         </div>

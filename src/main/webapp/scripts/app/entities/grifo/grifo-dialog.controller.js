@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('GrifoDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Grifo', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Grifo, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Grifo', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Grifo, Producto) {
 
         $scope.grifo = entity;
-        $scope.productos = Producto.query({filter: 'grifo-is-null'});
-        $q.all([$scope.grifo.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.grifo.producto || !$scope.grifo.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.grifo.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Grifo.get({id : id}, function(result) {
                 $scope.grifo = result;

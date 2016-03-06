@@ -22,7 +22,7 @@
             "relationshipId": 3,
             "relationshipName": "sanitario",
             "otherEntityName": "sanitario",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
@@ -31,7 +31,7 @@
             "relationshipId": 4,
             "relationshipName": "azulejo",
             "otherEntityName": "azulejo",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
@@ -40,7 +40,7 @@
             "relationshipId": 5,
             "relationshipName": "plato",
             "otherEntityName": "plato",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
@@ -49,7 +49,7 @@
             "relationshipId": 6,
             "relationshipName": "saco",
             "otherEntityName": "saco",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"
@@ -58,7 +58,7 @@
             "relationshipId": 7,
             "relationshipName": "grifo",
             "otherEntityName": "grifo",
-            "relationshipType": "one-to-one",
+            "relationshipType": "one-to-many",
             "otherEntityField": "id",
             "ownerSide": false,
             "otherEntityRelationshipName": "producto"

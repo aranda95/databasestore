@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('SacoDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Saco', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Saco, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Saco', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Saco, Producto) {
 
         $scope.saco = entity;
-        $scope.productos = Producto.query({filter: 'saco-is-null'});
-        $q.all([$scope.saco.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.saco.producto || !$scope.saco.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.saco.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Saco.get({id : id}, function(result) {
                 $scope.saco = result;

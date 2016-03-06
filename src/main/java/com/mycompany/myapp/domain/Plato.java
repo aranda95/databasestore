@@ -33,7 +33,8 @@ public class Plato implements Serializable {
     @Column(name = "cantidad")
     private Integer cantidad;
     
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "producto_id")
     private Producto producto;
 
     public Long getId() {

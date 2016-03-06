@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('PlatoDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Plato', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Plato, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Plato', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Plato, Producto) {
 
         $scope.plato = entity;
-        $scope.productos = Producto.query({filter: 'plato-is-null'});
-        $q.all([$scope.plato.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.plato.producto || !$scope.plato.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.plato.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Plato.get({id : id}, function(result) {
                 $scope.plato = result;

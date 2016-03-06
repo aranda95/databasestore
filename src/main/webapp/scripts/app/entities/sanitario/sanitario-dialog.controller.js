@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('SanitarioDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Sanitario', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Sanitario, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Sanitario', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Sanitario, Producto) {
 
         $scope.sanitario = entity;
-        $scope.productos = Producto.query({filter: 'sanitario-is-null'});
-        $q.all([$scope.sanitario.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.sanitario.producto || !$scope.sanitario.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.sanitario.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Sanitario.get({id : id}, function(result) {
                 $scope.sanitario = result;

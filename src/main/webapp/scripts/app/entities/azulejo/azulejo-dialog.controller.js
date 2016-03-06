@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('databasestoreApp').controller('AzulejoDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Azulejo', 'Producto',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Azulejo, Producto) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Azulejo', 'Producto',
+        function($scope, $stateParams, $uibModalInstance, entity, Azulejo, Producto) {
 
         $scope.azulejo = entity;
-        $scope.productos = Producto.query({filter: 'azulejo-is-null'});
-        $q.all([$scope.azulejo.$promise, $scope.productos.$promise]).then(function() {
-            if (!$scope.azulejo.producto || !$scope.azulejo.producto.id) {
-                return $q.reject();
-            }
-            return Producto.get({id : $scope.azulejo.producto.id}).$promise;
-        }).then(function(producto) {
-            $scope.productos.push(producto);
-        });
+        $scope.productos = Producto.query();
         $scope.load = function(id) {
             Azulejo.get({id : id}, function(result) {
                 $scope.azulejo = result;

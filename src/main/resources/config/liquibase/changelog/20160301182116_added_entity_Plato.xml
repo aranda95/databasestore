@@ -31,9 +31,7 @@
             
             <column name="cantidad" type="integer"/>
             
-            <column name="producto_id" type="bigint">
-                <constraints unique="true"/>
-            </column>
+            <column name="producto_id" type="bigint"/>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         

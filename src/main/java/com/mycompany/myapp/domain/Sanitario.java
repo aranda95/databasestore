@@ -30,7 +30,8 @@ public class Sanitario implements Serializable {
     @Column(name = "comentario")
     private String comentario;
     
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "producto_id")
     private Producto producto;
 
     public Long getId() {

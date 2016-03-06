@@ -30,25 +30,25 @@ public class Producto implements Serializable {
     @JsonIgnore
     private Set<Teka> tekas = new HashSet<>();
 
-    @OneToOne(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto")
     @JsonIgnore
-    private Sanitario sanitario;
+    private Set<Sanitario> sanitarios = new HashSet<>();
 
-    @OneToOne(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto")
     @JsonIgnore
-    private Azulejo azulejo;
+    private Set<Azulejo> azulejos = new HashSet<>();
 
-    @OneToOne(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto")
     @JsonIgnore
-    private Plato plato;
+    private Set<Plato> platos = new HashSet<>();
 
-    @OneToOne(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto")
     @JsonIgnore
-    private Saco saco;
+    private Set<Saco> sacos = new HashSet<>();
 
-    @OneToOne(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto")
     @JsonIgnore
-    private Grifo grifo;
+    private Set<Grifo> grifos = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -82,44 +82,44 @@ public class Producto implements Serializable {
         this.tekas = tekas;
     }
 
-    public Sanitario getSanitario() {
-        return sanitario;
+    public Set<Sanitario> getSanitarios() {
+        return sanitarios;
     }
 
-    public void setSanitario(Sanitario sanitario) {
-        this.sanitario = sanitario;
+    public void setSanitarios(Set<Sanitario> sanitarios) {
+        this.sanitarios = sanitarios;
     }
 
-    public Azulejo getAzulejo() {
-        return azulejo;
+    public Set<Azulejo> getAzulejos() {
+        return azulejos;
     }
 
-    public void setAzulejo(Azulejo azulejo) {
-        this.azulejo = azulejo;
+    public void setAzulejos(Set<Azulejo> azulejos) {
+        this.azulejos = azulejos;
     }
 
-    public Plato getPlato() {
-        return plato;
+    public Set<Plato> getPlatos() {
+        return platos;
     }
 
-    public void setPlato(Plato plato) {
-        this.plato = plato;
+    public void setPlatos(Set<Plato> platos) {
+        this.platos = platos;
     }
 
-    public Saco getSaco() {
-        return saco;
+    public Set<Saco> getSacos() {
+        return sacos;
     }
 
-    public void setSaco(Saco saco) {
-        this.saco = saco;
+    public void setSacos(Set<Saco> sacos) {
+        this.sacos = sacos;
     }
 
-    public Grifo getGrifo() {
-        return grifo;
+    public Set<Grifo> getGrifos() {
+        return grifos;
     }
 
-    public void setGrifo(Grifo grifo) {
-        this.grifo = grifo;
+    public void setGrifos(Set<Grifo> grifos) {
+        this.grifos = grifos;
     }
 
     @Override
