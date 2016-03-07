@@ -20,6 +20,13 @@
                      />
         </div>
         <div class="form-group">
+            <label class="control-label" translate="databasestoreApp.sanitario.Salida" for="field_Salida">Salida</label>
+            <select class="form-control" name="Salida" ng-model="sanitario.Salida" id="field_Salida">
+                <option value="Horizontal" translate="databasestoreApp.EnSan.Horizontal">Horizontal</option>
+                <option value="Vertical" translate="databasestoreApp.EnSan.Vertical">Vertical</option>
+            </select>
+        </div>
+        <div class="form-group">
             <label class="control-label" translate="databasestoreApp.sanitario.medidas" for="field_medidas">Medidas</label>
             <input type="text" class="form-control" name="medidas" id="field_medidas"
                     ng-model="sanitario.medidas"

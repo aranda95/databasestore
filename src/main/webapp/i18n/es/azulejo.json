@@ -1,0 +1,25 @@
+{
+    "databasestoreApp": {
+        "azulejo" : {
+            "home": {
+                "title": "Azulejos",
+                "createLabel": "Create a new Azulejo",
+                "createOrEditLabel": "Create or edit a Azulejo",
+                "search": "Search for Azulejo"
+            },
+            "created": "A new Azulejo is created with identifier {{ param }}",
+            "updated": "A Azulejo is updated with identifier {{ param }}",
+            "deleted": "A Azulejo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Azulejo {{ id }}?"
+            },
+            "detail": {
+                "title": "Azulejo"
+            },
+            "marca": "Marca",
+            "m2": "M2",
+            "comentario": "Comentario",
+            "producto": "Producto"
+        }
+    }
+}

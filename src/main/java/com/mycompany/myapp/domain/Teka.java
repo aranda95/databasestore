@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
-import com.mycompany.myapp.domain.enumeration.Tipo;
+import com.mycompany.myapp.domain.enumeration.EnTek;
 
 /**
  * A Teka.
@@ -22,7 +22,7 @@ public class Teka implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private Tipo tipo;
+    private EnTek Tipo;
     
     @Column(name = "modelo")
     private String modelo;
@@ -45,12 +45,12 @@ public class Teka implements Serializable {
         this.id = id;
     }
 
-    public Tipo getTipo() {
-        return tipo;
+    public EnTek getTipo() {
+        return Tipo;
     }
     
-    public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
+    public void setTipo(EnTek Tipo) {
+        this.Tipo = Tipo;
     }
 
     public String getModelo() {
@@ -109,7 +109,7 @@ public class Teka implements Serializable {
     public String toString() {
         return "Teka{" +
             "id=" + id +
-            ", tipo='" + tipo + "'" +
+            ", Tipo='" + Tipo + "'" +
             ", modelo='" + modelo + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

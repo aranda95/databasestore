@@ -1,0 +1,12 @@
+{
+    "databasestoreApp": {
+        "EnGrif" : {
+            "null": "",
+            "Banera": "Banera",
+            "Columnas": "Columnas",
+            "Cocina": "Cocina",
+            "Monomandos": "Monomandos",
+            "Varios": "Varios"
+        }
+    }
+}

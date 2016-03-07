@@ -29,6 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.mycompany.myapp.domain.enumeration.EnSan;
 
 /**
  * Test class for the SanitarioResource REST controller.
@@ -43,6 +44,9 @@ public class SanitarioResourceIntTest {
 
     private static final String DEFAULT_MODELO = "AAAAA";
     private static final String UPDATED_MODELO = "BBBBB";
+    
+    private static final EnSan DEFAULT_SALIDA = EnSan.Horizontal;
+    private static final EnSan UPDATED_SALIDA = EnSan.Vertical;
     private static final String DEFAULT_MEDIDAS = "AAAAA";
     private static final String UPDATED_MEDIDAS = "BBBBB";
 
@@ -78,6 +82,7 @@ public class SanitarioResourceIntTest {
     public void initTest() {
         sanitario = new Sanitario();
         sanitario.setModelo(DEFAULT_MODELO);
+        sanitario.setSalida(DEFAULT_SALIDA);
         sanitario.setMedidas(DEFAULT_MEDIDAS);
         sanitario.setCantidad(DEFAULT_CANTIDAD);
         sanitario.setComentario(DEFAULT_COMENTARIO);
@@ -100,6 +105,7 @@ public class SanitarioResourceIntTest {
         assertThat(sanitarios).hasSize(databaseSizeBeforeCreate + 1);
         Sanitario testSanitario = sanitarios.get(sanitarios.size() - 1);
         assertThat(testSanitario.getModelo()).isEqualTo(DEFAULT_MODELO);
+        assertThat(testSanitario.getSalida()).isEqualTo(DEFAULT_SALIDA);
         assertThat(testSanitario.getMedidas()).isEqualTo(DEFAULT_MEDIDAS);
         assertThat(testSanitario.getCantidad()).isEqualTo(DEFAULT_CANTIDAD);
         assertThat(testSanitario.getComentario()).isEqualTo(DEFAULT_COMENTARIO);
@@ -117,6 +123,7 @@ public class SanitarioResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(sanitario.getId().intValue())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
+                .andExpect(jsonPath("$.[*].Salida").value(hasItem(DEFAULT_SALIDA.toString())))
                 .andExpect(jsonPath("$.[*].medidas").value(hasItem(DEFAULT_MEDIDAS.toString())))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
@@ -134,6 +141,7 @@ public class SanitarioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(sanitario.getId().intValue()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
+            .andExpect(jsonPath("$.Salida").value(DEFAULT_SALIDA.toString()))
             .andExpect(jsonPath("$.medidas").value(DEFAULT_MEDIDAS.toString()))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
@@ -157,6 +165,7 @@ public class SanitarioResourceIntTest {
 
         // Update the sanitario
         sanitario.setModelo(UPDATED_MODELO);
+        sanitario.setSalida(UPDATED_SALIDA);
         sanitario.setMedidas(UPDATED_MEDIDAS);
         sanitario.setCantidad(UPDATED_CANTIDAD);
         sanitario.setComentario(UPDATED_COMENTARIO);
@@ -171,6 +180,7 @@ public class SanitarioResourceIntTest {
         assertThat(sanitarios).hasSize(databaseSizeBeforeUpdate);
         Sanitario testSanitario = sanitarios.get(sanitarios.size() - 1);
         assertThat(testSanitario.getModelo()).isEqualTo(UPDATED_MODELO);
+        assertThat(testSanitario.getSalida()).isEqualTo(UPDATED_SALIDA);
         assertThat(testSanitario.getMedidas()).isEqualTo(UPDATED_MEDIDAS);
         assertThat(testSanitario.getCantidad()).isEqualTo(UPDATED_CANTIDAD);
         assertThat(testSanitario.getComentario()).isEqualTo(UPDATED_COMENTARIO);

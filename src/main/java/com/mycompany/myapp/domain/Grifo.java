@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
-import com.mycompany.myapp.domain.enumeration.Seccion;
+import com.mycompany.myapp.domain.enumeration.EnGrif;
 
 /**
  * A Grifo.
@@ -21,8 +21,11 @@ public class Grifo implements Serializable {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "seccion")
-    private Seccion seccion;
+    @Column(name = "tipo")
+    private EnGrif Tipo;
+    
+    @Column(name = "referencia")
+    private String Referencia;
     
     @Column(name = "cantidad")
     private Integer cantidad;
@@ -42,12 +45,20 @@ public class Grifo implements Serializable {
         this.id = id;
     }
 
-    public Seccion getSeccion() {
-        return seccion;
+    public EnGrif getTipo() {
+        return Tipo;
     }
     
-    public void setSeccion(Seccion seccion) {
-        this.seccion = seccion;
+    public void setTipo(EnGrif Tipo) {
+        this.Tipo = Tipo;
+    }
+
+    public String getReferencia() {
+        return Referencia;
+    }
+    
+    public void setReferencia(String Referencia) {
+        this.Referencia = Referencia;
     }
 
     public Integer getCantidad() {
@@ -98,7 +109,8 @@ public class Grifo implements Serializable {
     public String toString() {
         return "Grifo{" +
             "id=" + id +
-            ", seccion='" + seccion + "'" +
+            ", Tipo='" + Tipo + "'" +
+            ", Referencia='" + Referencia + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +
             '}';

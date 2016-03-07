@@ -20,7 +20,7 @@
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="databasestoreApp.calentador.modelo">Modelo</span></th>
-                    <th><span translate="databasestoreApp.calentador.gas">Gas</span></th>
+                    <th><span translate="databasestoreApp.calentador.Gas">Gas</span></th>
                     <th><span translate="databasestoreApp.calentador.litros">Litros</span></th>
                     <th><span translate="databasestoreApp.calentador.cantidad">Cantidad</span></th>
                     <th><span translate="databasestoreApp.calentador.comentario">Comentario</span></th>
@@ -32,7 +32,7 @@
                 <tr ng-repeat="calentador in calentadors track by calentador.id">
                     <td><a ui-sref="calentador.detail({id:calentador.id})">{{calentador.id}}</a></td>
                     <td>{{calentador.modelo}}</td>
-                    <td>{{calentador.gas}}</td>
+                    <td translate="{{'databasestoreApp.EnCal.' + calentador.Gas}}">{{calentador.Gas}}</td>
                     <td>{{calentador.litros}}</td>
                     <td>{{calentador.cantidad}}</td>
                     <td>{{calentador.comentario}}</td>

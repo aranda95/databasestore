@@ -23,6 +23,8 @@
             </column>
             <column name="modelo" type="varchar(255)"/>
             
+            <column name="salida" type="varchar(255)"/>
+            
             <column name="medidas" type="varchar(255)"/>
             
             <column name="cantidad" type="integer"/>

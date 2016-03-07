@@ -19,7 +19,8 @@ angular.module('databasestoreApp')
 
         $scope.clear = function () {
             $scope.grifo = {
-                seccion: null,
+                Tipo: null,
+                Referencia: null,
                 cantidad: null,
                 comentario: null,
                 id: null

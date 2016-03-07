@@ -19,7 +19,7 @@ angular.module('databasestoreApp')
 
         $scope.clear = function () {
             $scope.teka = {
-                tipo: null,
+                Tipo: null,
                 modelo: null,
                 cantidad: null,
                 comentario: null,

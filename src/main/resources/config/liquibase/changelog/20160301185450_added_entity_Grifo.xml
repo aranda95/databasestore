@@ -21,7 +21,9 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="seccion" type="varchar(255)"/>
+            <column name="tipo" type="varchar(255)"/>
+            
+            <column name="referencia" type="varchar(255)"/>
             
             <column name="cantidad" type="integer"/>
             

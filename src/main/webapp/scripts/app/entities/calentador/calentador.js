@@ -19,6 +19,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('calentador');
+                        $translatePartialLoader.addPart('enCal');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]
@@ -40,6 +41,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('calentador');
+                        $translatePartialLoader.addPart('enCal');
                         return $translate.refresh();
                     }],
                     entity: ['$stateParams', 'Calentador', function($stateParams, Calentador) {
@@ -62,7 +64,7 @@ angular.module('databasestoreApp')
                             entity: function () {
                                 return {
                                     modelo: null,
-                                    gas: null,
+                                    Gas: null,
                                     litros: null,
                                     cantidad: null,
                                     comentario: null,

@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
+import com.mycompany.myapp.domain.enumeration.EnCal;
+
 /**
  * A Calentador.
  */
@@ -21,8 +23,9 @@ public class Calentador implements Serializable {
     @Column(name = "modelo")
     private String modelo;
     
+    @Enumerated(EnumType.STRING)
     @Column(name = "gas")
-    private String gas;
+    private EnCal Gas;
     
     @Column(name = "litros")
     private Integer litros;
@@ -53,12 +56,12 @@ public class Calentador implements Serializable {
         this.modelo = modelo;
     }
 
-    public String getGas() {
-        return gas;
+    public EnCal getGas() {
+        return Gas;
     }
     
-    public void setGas(String gas) {
-        this.gas = gas;
+    public void setGas(EnCal Gas) {
+        this.Gas = Gas;
     }
 
     public Integer getLitros() {
@@ -118,7 +121,7 @@ public class Calentador implements Serializable {
         return "Calentador{" +
             "id=" + id +
             ", modelo='" + modelo + "'" +
-            ", gas='" + gas + "'" +
+            ", Gas='" + Gas + "'" +
             ", litros='" + litros + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

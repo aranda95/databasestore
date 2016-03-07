@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.mycompany.myapp.domain.enumeration.Seccion;
+import com.mycompany.myapp.domain.enumeration.EnGrif;
 
 /**
  * Test class for the GrifoResource REST controller.
@@ -43,8 +43,10 @@ import com.mycompany.myapp.domain.enumeration.Seccion;
 public class GrifoResourceIntTest {
 
     
-    private static final Seccion DEFAULT_SECCION = Seccion.banera;
-    private static final Seccion UPDATED_SECCION = Seccion.columnas;
+    private static final EnGrif DEFAULT_TIPO = EnGrif.Banera;
+    private static final EnGrif UPDATED_TIPO = EnGrif.Columnas;
+    private static final String DEFAULT_REFERENCIA = "AAAAA";
+    private static final String UPDATED_REFERENCIA = "BBBBB";
 
     private static final Integer DEFAULT_CANTIDAD = 1;
     private static final Integer UPDATED_CANTIDAD = 2;
@@ -77,7 +79,8 @@ public class GrifoResourceIntTest {
     @Before
     public void initTest() {
         grifo = new Grifo();
-        grifo.setSeccion(DEFAULT_SECCION);
+        grifo.setTipo(DEFAULT_TIPO);
+        grifo.setReferencia(DEFAULT_REFERENCIA);
         grifo.setCantidad(DEFAULT_CANTIDAD);
         grifo.setComentario(DEFAULT_COMENTARIO);
     }
@@ -98,7 +101,8 @@ public class GrifoResourceIntTest {
         List<Grifo> grifos = grifoRepository.findAll();
         assertThat(grifos).hasSize(databaseSizeBeforeCreate + 1);
         Grifo testGrifo = grifos.get(grifos.size() - 1);
-        assertThat(testGrifo.getSeccion()).isEqualTo(DEFAULT_SECCION);
+        assertThat(testGrifo.getTipo()).isEqualTo(DEFAULT_TIPO);
+        assertThat(testGrifo.getReferencia()).isEqualTo(DEFAULT_REFERENCIA);
         assertThat(testGrifo.getCantidad()).isEqualTo(DEFAULT_CANTIDAD);
         assertThat(testGrifo.getComentario()).isEqualTo(DEFAULT_COMENTARIO);
     }
@@ -114,7 +118,8 @@ public class GrifoResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(grifo.getId().intValue())))
-                .andExpect(jsonPath("$.[*].seccion").value(hasItem(DEFAULT_SECCION.toString())))
+                .andExpect(jsonPath("$.[*].Tipo").value(hasItem(DEFAULT_TIPO.toString())))
+                .andExpect(jsonPath("$.[*].Referencia").value(hasItem(DEFAULT_REFERENCIA.toString())))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
     }
@@ -130,7 +135,8 @@ public class GrifoResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(grifo.getId().intValue()))
-            .andExpect(jsonPath("$.seccion").value(DEFAULT_SECCION.toString()))
+            .andExpect(jsonPath("$.Tipo").value(DEFAULT_TIPO.toString()))
+            .andExpect(jsonPath("$.Referencia").value(DEFAULT_REFERENCIA.toString()))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
     }
@@ -152,7 +158,8 @@ public class GrifoResourceIntTest {
 		int databaseSizeBeforeUpdate = grifoRepository.findAll().size();
 
         // Update the grifo
-        grifo.setSeccion(UPDATED_SECCION);
+        grifo.setTipo(UPDATED_TIPO);
+        grifo.setReferencia(UPDATED_REFERENCIA);
         grifo.setCantidad(UPDATED_CANTIDAD);
         grifo.setComentario(UPDATED_COMENTARIO);
 
@@ -165,7 +172,8 @@ public class GrifoResourceIntTest {
         List<Grifo> grifos = grifoRepository.findAll();
         assertThat(grifos).hasSize(databaseSizeBeforeUpdate);
         Grifo testGrifo = grifos.get(grifos.size() - 1);
-        assertThat(testGrifo.getSeccion()).isEqualTo(UPDATED_SECCION);
+        assertThat(testGrifo.getTipo()).isEqualTo(UPDATED_TIPO);
+        assertThat(testGrifo.getReferencia()).isEqualTo(UPDATED_REFERENCIA);
         assertThat(testGrifo.getCantidad()).isEqualTo(UPDATED_CANTIDAD);
         assertThat(testGrifo.getComentario()).isEqualTo(UPDATED_COMENTARIO);
     }

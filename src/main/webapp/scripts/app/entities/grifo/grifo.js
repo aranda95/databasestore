@@ -19,7 +19,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('grifo');
-                        $translatePartialLoader.addPart('seccion');
+                        $translatePartialLoader.addPart('enGrif');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]
@@ -41,7 +41,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('grifo');
-                        $translatePartialLoader.addPart('seccion');
+                        $translatePartialLoader.addPart('enGrif');
                         return $translate.refresh();
                     }],
                     entity: ['$stateParams', 'Grifo', function($stateParams, Grifo) {
@@ -63,7 +63,8 @@ angular.module('databasestoreApp')
                         resolve: {
                             entity: function () {
                                 return {
-                                    seccion: null,
+                                    Tipo: null,
+                                    Referencia: null,
                                     cantidad: null,
                                     comentario: null,
                                     id: null

@@ -43,8 +43,8 @@ import com.mycompany.myapp.domain.enumeration.Modelo;
 public class SacoResourceIntTest {
 
     
-    private static final Modelo DEFAULT_MODELO = Modelo.minicontainer;
-    private static final Modelo UPDATED_MODELO = Modelo.runa;
+    private static final Modelo DEFAULT_MODELO = Modelo.Minicontainer;
+    private static final Modelo UPDATED_MODELO = Modelo.Runa;
 
     private static final Integer DEFAULT_CANTIDAD = 1;
     private static final Integer UPDATED_CANTIDAD = 2;

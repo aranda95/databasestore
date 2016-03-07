@@ -13,17 +13,22 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "seccion",
-            "fieldType": "Seccion",
-            "fieldValues": "banera,columnas,cocina,monomandos,varios"
+            "fieldName": "Tipo",
+            "fieldType": "EnGrif",
+            "fieldValues": "Banera,Columnas,Cocina,Monomandos,Varios"
         },
         {
             "fieldId": 2,
+            "fieldName": "Referencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
             "fieldName": "cantidad",
             "fieldType": "Integer"
         },
         {
-            "fieldId": 3,
+            "fieldId": 4,
             "fieldName": "comentario",
             "fieldType": "String"
         }

@@ -19,7 +19,7 @@
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="databasestoreApp.teka.tipo">Tipo</span></th>
+                    <th><span translate="databasestoreApp.teka.Tipo">Tipo</span></th>
                     <th><span translate="databasestoreApp.teka.modelo">Modelo</span></th>
                     <th><span translate="databasestoreApp.teka.cantidad">Cantidad</span></th>
                     <th><span translate="databasestoreApp.teka.comentario">Comentario</span></th>
@@ -30,7 +30,7 @@
             <tbody>
                 <tr ng-repeat="teka in tekas track by teka.id">
                     <td><a ui-sref="teka.detail({id:teka.id})">{{teka.id}}</a></td>
-                    <td translate="{{'databasestoreApp.Tipo.' + teka.tipo}}">{{teka.tipo}}</td>
+                    <td translate="{{'databasestoreApp.EnTek.' + teka.Tipo}}">{{teka.Tipo}}</td>
                     <td>{{teka.modelo}}</td>
                     <td>{{teka.cantidad}}</td>
                     <td>{{teka.comentario}}</td>

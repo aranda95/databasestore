@@ -19,6 +19,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('sanitario');
+                        $translatePartialLoader.addPart('enSan');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]
@@ -40,6 +41,7 @@ angular.module('databasestoreApp')
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('sanitario');
+                        $translatePartialLoader.addPart('enSan');
                         return $translate.refresh();
                     }],
                     entity: ['$stateParams', 'Sanitario', function($stateParams, Sanitario) {
@@ -62,6 +64,7 @@ angular.module('databasestoreApp')
                             entity: function () {
                                 return {
                                     modelo: null,
+                                    Salida: null,
                                     medidas: null,
                                     cantidad: null,
                                     comentario: null,

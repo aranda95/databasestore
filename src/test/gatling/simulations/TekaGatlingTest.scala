@@ -67,7 +67,7 @@ class TekaGatlingTest extends Simulation {
             .exec(http("Create new teka")
             .post("/api/tekas")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "tipo":null, "modelo":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "Tipo":null, "modelo":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_teka_url")))
             .pause(10)

@@ -28,6 +28,8 @@ angular.module('databasestoreApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
+        ,'ca'
+        ,'es'
         // jhipster-needle-006 - JHipster will add new languages here
     ]
 );

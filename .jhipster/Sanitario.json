@@ -18,16 +18,22 @@
         },
         {
             "fieldId": 2,
+            "fieldName": "Salida",
+            "fieldType": "EnSan",
+            "fieldValues": "Horizontal,Vertical"
+        },
+        {
+            "fieldId": 3,
             "fieldName": "medidas",
             "fieldType": "String"
         },
         {
-            "fieldId": 3,
+            "fieldId": 4,
             "fieldName": "cantidad",
             "fieldType": "Integer"
         },
         {
-            "fieldId": 4,
+            "fieldId": 5,
             "fieldName": "comentario",
             "fieldType": "String"
         }

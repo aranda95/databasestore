@@ -20,6 +20,7 @@ angular.module('databasestoreApp')
         $scope.clear = function () {
             $scope.sanitario = {
                 modelo: null,
+                Salida: null,
                 medidas: null,
                 cantidad: null,
                 comentario: null,

@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
+import com.mycompany.myapp.domain.enumeration.EnSan;
+
 /**
  * A Sanitario.
  */
@@ -20,6 +22,10 @@ public class Sanitario implements Serializable {
 
     @Column(name = "modelo")
     private String modelo;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "salida")
+    private EnSan Salida;
     
     @Column(name = "medidas")
     private String medidas;
@@ -48,6 +54,14 @@ public class Sanitario implements Serializable {
     
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public EnSan getSalida() {
+        return Salida;
+    }
+    
+    public void setSalida(EnSan Salida) {
+        this.Salida = Salida;
     }
 
     public String getMedidas() {
@@ -107,6 +121,7 @@ public class Sanitario implements Serializable {
         return "Sanitario{" +
             "id=" + id +
             ", modelo='" + modelo + "'" +
+            ", Salida='" + Salida + "'" +
             ", medidas='" + medidas + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

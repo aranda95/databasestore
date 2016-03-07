@@ -29,6 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.mycompany.myapp.domain.enumeration.EnCal;
 
 /**
  * Test class for the CalentadorResource REST controller.
@@ -43,8 +44,9 @@ public class CalentadorResourceIntTest {
 
     private static final String DEFAULT_MODELO = "AAAAA";
     private static final String UPDATED_MODELO = "BBBBB";
-    private static final String DEFAULT_GAS = "AAAAA";
-    private static final String UPDATED_GAS = "BBBBB";
+    
+    private static final EnCal DEFAULT_GAS = EnCal.Natural;
+    private static final EnCal UPDATED_GAS = EnCal.Butano;
 
     private static final Integer DEFAULT_LITROS = 1;
     private static final Integer UPDATED_LITROS = 2;
@@ -122,7 +124,7 @@ public class CalentadorResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(calentador.getId().intValue())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
-                .andExpect(jsonPath("$.[*].gas").value(hasItem(DEFAULT_GAS.toString())))
+                .andExpect(jsonPath("$.[*].Gas").value(hasItem(DEFAULT_GAS.toString())))
                 .andExpect(jsonPath("$.[*].litros").value(hasItem(DEFAULT_LITROS)))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
@@ -140,7 +142,7 @@ public class CalentadorResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(calentador.getId().intValue()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
-            .andExpect(jsonPath("$.gas").value(DEFAULT_GAS.toString()))
+            .andExpect(jsonPath("$.Gas").value(DEFAULT_GAS.toString()))
             .andExpect(jsonPath("$.litros").value(DEFAULT_LITROS))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));

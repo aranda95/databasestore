@@ -20,6 +20,7 @@
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="databasestoreApp.sanitario.modelo">Modelo</span></th>
+                    <th><span translate="databasestoreApp.sanitario.Salida">Salida</span></th>
                     <th><span translate="databasestoreApp.sanitario.medidas">Medidas</span></th>
                     <th><span translate="databasestoreApp.sanitario.cantidad">Cantidad</span></th>
                     <th><span translate="databasestoreApp.sanitario.comentario">Comentario</span></th>
@@ -31,6 +32,7 @@
                 <tr ng-repeat="sanitario in sanitarios track by sanitario.id">
                     <td><a ui-sref="sanitario.detail({id:sanitario.id})">{{sanitario.id}}</a></td>
                     <td>{{sanitario.modelo}}</td>
+                    <td translate="{{'databasestoreApp.EnSan.' + sanitario.Salida}}">{{sanitario.Salida}}</td>
                     <td>{{sanitario.medidas}}</td>
                     <td>{{sanitario.cantidad}}</td>
                     <td>{{sanitario.comentario}}</td>

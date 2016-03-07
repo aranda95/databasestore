@@ -17,6 +17,7 @@
                 "title": "Sanitario"
             },
             "modelo": "Modelo",
+            "Salida": "Salida",
             "medidas": "Medidas",
             "cantidad": "Cantidad",
             "comentario": "Comentario",

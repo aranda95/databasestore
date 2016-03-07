@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.mycompany.myapp.domain.enumeration.Tipo;
+import com.mycompany.myapp.domain.enumeration.EnTek;
 
 /**
  * Test class for the TekaResource REST controller.
@@ -43,8 +43,8 @@ import com.mycompany.myapp.domain.enumeration.Tipo;
 public class TekaResourceIntTest {
 
     
-    private static final Tipo DEFAULT_TIPO = Tipo.Hornos;
-    private static final Tipo UPDATED_TIPO = Tipo.Encimeras;
+    private static final EnTek DEFAULT_TIPO = EnTek.Hornos;
+    private static final EnTek UPDATED_TIPO = EnTek.Encimeras;
     private static final String DEFAULT_MODELO = "AAAAA";
     private static final String UPDATED_MODELO = "BBBBB";
 
@@ -118,7 +118,7 @@ public class TekaResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(teka.getId().intValue())))
-                .andExpect(jsonPath("$.[*].tipo").value(hasItem(DEFAULT_TIPO.toString())))
+                .andExpect(jsonPath("$.[*].Tipo").value(hasItem(DEFAULT_TIPO.toString())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
@@ -135,7 +135,7 @@ public class TekaResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(teka.getId().intValue()))
-            .andExpect(jsonPath("$.tipo").value(DEFAULT_TIPO.toString()))
+            .andExpect(jsonPath("$.Tipo").value(DEFAULT_TIPO.toString()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));

@@ -20,7 +20,7 @@ angular.module('databasestoreApp')
         $scope.clear = function () {
             $scope.calentador = {
                 modelo: null,
-                gas: null,
+                Gas: null,
                 litros: null,
                 cantidad: null,
                 comentario: null,

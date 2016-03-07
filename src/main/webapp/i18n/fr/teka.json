@@ -16,7 +16,7 @@
             "detail": {
                 "title": "Teka"
             },
-            "tipo": "Tipo",
+            "Tipo": "Tipo",
             "modelo": "Modelo",
             "cantidad": "Cantidad",
             "comentario": "Comentario",
