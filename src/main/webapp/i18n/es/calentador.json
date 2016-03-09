@@ -2,16 +2,16 @@
     "databasestoreApp": {
         "calentador" : {
             "home": {
-                "title": "Calentadors",
-                "createLabel": "Create a new Calentador",
-                "createOrEditLabel": "Create or edit a Calentador",
-                "search": "Search for Calentador"
+                "title": "Calentadores",
+                "createLabel": "Añadir un nuevo Calentador",
+                "createOrEditLabel": "Añadir o modificar un Calentador",
+                "search": "Buscar un Calentador"
             },
-            "created": "A new Calentador is created with identifier {{ param }}",
-            "updated": "A Calentador is updated with identifier {{ param }}",
-            "deleted": "A Calentador is deleted with identifier {{ param }}",
+            "created": "Se ha creado un nuevo calentador con Id {{ param }}",
+            "updated": "Se ha modificado un calentador con Id {{ param }}",
+            "deleted": "Se ha borrado un calentador con Id  {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Calentador {{ id }}?"
+                "question": "Estas seguro que quieres borrar el calentador con Id ? {{ id }}?"
             },
             "detail": {
                 "title": "Calentador"

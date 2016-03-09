@@ -3,15 +3,15 @@
         "grifo" : {
             "home": {
                 "title": "Grifos",
-                "createLabel": "Create a new Grifo",
-                "createOrEditLabel": "Create or edit a Grifo",
-                "search": "Search for Grifo"
+                "createLabel": "Añadir un nuevo Grifo",
+                "createOrEditLabel": "Añadir o modificar un Grifo",
+                "search": "Buscar un Grifo"
             },
-            "created": "A new Grifo is created with identifier {{ param }}",
-            "updated": "A Grifo is updated with identifier {{ param }}",
-            "deleted": "A Grifo is deleted with identifier {{ param }}",
+            "created": "Se ha añadido un nuevo grifo con Id {{ param }}",
+            "updated": "Se ha modificado un grifo con Id {{ param }}",
+            "deleted": "Se ha borrado un grifo con Id{{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Grifo {{ id }}?"
+                "question": "Estas seguro que quieres borrar el grifo con Id ? {{ id }}?"
             },
             "detail": {
                 "title": "Grifo"

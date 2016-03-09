@@ -3,15 +3,15 @@
         "azulejo" : {
             "home": {
                 "title": "Azulejos",
-                "createLabel": "Create a new Azulejo",
-                "createOrEditLabel": "Create or edit a Azulejo",
-                "search": "Search for Azulejo"
+                "createLabel": "Añadir un nuevo Azulejo",
+                "createOrEditLabel": "Añadir o modificar un Azulejo",
+                "search": "Buscar un Azulejo"
             },
-            "created": "A new Azulejo is created with identifier {{ param }}",
-            "updated": "A Azulejo is updated with identifier {{ param }}",
-            "deleted": "A Azulejo is deleted with identifier {{ param }}",
+            "created": "Se ha creado un nuevo azulejo con Id {{ param }}",
+            "updated": "Se ha modificado un azulejo con Id {{ param }}",
+            "deleted": "Se ha borrado un azulejo con Id {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Azulejo {{ id }}?"
+                "question": "Estas seguro que quieres borrar el azulejo con Id ?{{ id }}?"
             },
             "detail": {
                 "title": "Azulejo"

@@ -1056,3 +1056,14 @@ body {
         height: 44px;
     }
 }
+
+#botonmenu{
+ position:fixed;
+    top:5px;
+    left:25px;
+    z-index:1600;
+    width:30px;
+    height:30px;
+    background: transparent;
+    border:0;
+}
