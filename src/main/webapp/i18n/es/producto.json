@@ -3,7 +3,8 @@
         "producto" : {
             "home": {
                 "title": "Productos",
-                "createLabel": "Create a new Producto",
+
+                "createLabel": "Crea un nuevo Producto",
                 "createOrEditLabel": "Create or edit a Producto",
                 "search": "Search for Producto"
             },
