@@ -4,15 +4,15 @@
             "home": {
                 "title": "Productos",
 
-                "createLabel": "Crea un nuevo Producto",
-                "createOrEditLabel": "Create or edit a Producto",
-                "search": "Search for Producto"
+                "createLabel": "Añadir un nuevo Producto",
+                "createOrEditLabel": "Añadir o editar un Producto",
+                "search": "Buscar un Producto"
             },
-            "created": "A new Producto is created with identifier {{ param }}",
-            "updated": "A Producto is updated with identifier {{ param }}",
-            "deleted": "A Producto is deleted with identifier {{ param }}",
+            "created": "Un nuevo producto ha sido añadido con el identificador {{ param }}",
+            "updated": "Un producto ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un producto ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Producto {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Producto {{ id }}?"
             },
             "detail": {
                 "title": "Producto"

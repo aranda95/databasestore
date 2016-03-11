@@ -3,21 +3,21 @@
         "sanitario" : {
             "home": {
                 "title": "Sanitarios",
-                "createLabel": "Create a new Sanitario",
-                "createOrEditLabel": "Create or edit a Sanitario",
-                "search": "Search for Sanitario"
+                "createLabel": "Añadir un nuevo Sanitario",
+                "createOrEditLabel": "Añadir o editar un Sanitario",
+                "search": "Buscar un Sanitario"
             },
-            "created": "A new Sanitario is created with identifier {{ param }}",
-            "updated": "A Sanitario is updated with identifier {{ param }}",
-            "deleted": "A Sanitario is deleted with identifier {{ param }}",
+            "created": "Un nuevo sanitario ha sido añadido con el identificador {{ param }}",
+            "updated": "Un sanitario ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un sanitario ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Sanitario {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Sanitario {{ id }}?"
             },
             "detail": {
                 "title": "Sanitario"
             },
             "modelo": "Modelo",
-            "Salida": "Salida",
+            "salida": "Salida",
             "medidas": "Medidas",
             "cantidad": "Cantidad",
             "comentario": "Comentario",

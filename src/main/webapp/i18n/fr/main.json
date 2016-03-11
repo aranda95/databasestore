@@ -1,10 +1,8 @@
 {
     "main": {
-        "title": "Bienvenue, Java Hipster !",
-        "subtitle": "Ceci est votre page d'accueil",
-        "logged": {
-            "message": "Vous êtes connecté en tant que \"{{username}}\"."
-        },
+        "title": "Bienvenue, G.Aranda !",
+        "subtitle": "Ceci est votre contrôle du site Stock",
+        "subbtitle":"Pour ajouter, supprimer ou rechercher l'un de ses produits , déroulez le menu et sélectionner les produits ",
         "question": "Si vous avez des questions à propos de JHipster:",
         "link": {
             "homepage": "Page d'accueil de JHipster",

@@ -2,21 +2,21 @@
     "databasestoreApp": {
         "teka" : {
             "home": {
-                "title": "Tekas",
-                "createLabel": "Create a new Teka",
-                "createOrEditLabel": "Create or edit a Teka",
-                "search": "Search for Teka"
+                "title": "Teka",
+                "createLabel": "Añadir un nuevo producto teka",
+                "createOrEditLabel": "Añadir o editar un producto teka",
+                "search": "Buscar un producto teka"
             },
-            "created": "A new Teka is created with identifier {{ param }}",
-            "updated": "A Teka is updated with identifier {{ param }}",
-            "deleted": "A Teka is deleted with identifier {{ param }}",
+            "created": "Un nuevo producto teka ha sido añadido con el identificador {{ param }}",
+            "updated": "Un producto teka ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un producto teka ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Teka {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el producto teka {{ id }}?"
             },
             "detail": {
                 "title": "Teka"
             },
-            "Tipo": "Tipo",
+            "tipo": "Tipo",
             "modelo": "Modelo",
             "cantidad": "Cantidad",
             "comentario": "Comentario",

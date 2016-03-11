@@ -67,7 +67,7 @@ class CalentadorGatlingTest extends Simulation {
             .exec(http("Create new calentador")
             .post("/api/calentadors")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "modelo":"SAMPLE_TEXT", "Gas":null, "litros":"0", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "modelo":"SAMPLE_TEXT", "gas":null, "litros":"0", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_calentador_url")))
             .pause(10)

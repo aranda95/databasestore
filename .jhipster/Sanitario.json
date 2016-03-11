@@ -18,7 +18,7 @@
         },
         {
             "fieldId": 2,
-            "fieldName": "Salida",
+            "fieldName": "salida",
             "fieldType": "EnSan",
             "fieldValues": "Horizontal,Vertical"
         },

@@ -124,7 +124,7 @@ public class CalentadorResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(calentador.getId().intValue())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
-                .andExpect(jsonPath("$.[*].Gas").value(hasItem(DEFAULT_GAS.toString())))
+                .andExpect(jsonPath("$.[*].gas").value(hasItem(DEFAULT_GAS.toString())))
                 .andExpect(jsonPath("$.[*].litros").value(hasItem(DEFAULT_LITROS)))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
@@ -142,7 +142,7 @@ public class CalentadorResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(calentador.getId().intValue()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
-            .andExpect(jsonPath("$.Gas").value(DEFAULT_GAS.toString()))
+            .andExpect(jsonPath("$.gas").value(DEFAULT_GAS.toString()))
             .andExpect(jsonPath("$.litros").value(DEFAULT_LITROS))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));

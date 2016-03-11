@@ -25,7 +25,7 @@ public class Sanitario implements Serializable {
     
     @Enumerated(EnumType.STRING)
     @Column(name = "salida")
-    private EnSan Salida;
+    private EnSan salida;
     
     @Column(name = "medidas")
     private String medidas;
@@ -57,11 +57,11 @@ public class Sanitario implements Serializable {
     }
 
     public EnSan getSalida() {
-        return Salida;
+        return salida;
     }
     
-    public void setSalida(EnSan Salida) {
-        this.Salida = Salida;
+    public void setSalida(EnSan salida) {
+        this.salida = salida;
     }
 
     public String getMedidas() {
@@ -121,7 +121,7 @@ public class Sanitario implements Serializable {
         return "Sanitario{" +
             "id=" + id +
             ", modelo='" + modelo + "'" +
-            ", Salida='" + Salida + "'" +
+            ", salida='" + salida + "'" +
             ", medidas='" + medidas + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

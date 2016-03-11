@@ -67,7 +67,7 @@ class SanitarioGatlingTest extends Simulation {
             .exec(http("Create new sanitario")
             .post("/api/sanitarios")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "modelo":"SAMPLE_TEXT", "Salida":null, "medidas":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "modelo":"SAMPLE_TEXT", "salida":null, "medidas":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_sanitario_url")))
             .pause(10)

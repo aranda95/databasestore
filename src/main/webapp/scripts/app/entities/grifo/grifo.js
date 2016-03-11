@@ -63,8 +63,8 @@ angular.module('databasestoreApp')
                         resolve: {
                             entity: function () {
                                 return {
-                                    Tipo: null,
-                                    Referencia: null,
+                                    tipo: null,
+                                    referencia: null,
                                     cantidad: null,
                                     comentario: null,
                                     id: null

@@ -18,7 +18,7 @@
         },
         {
             "fieldId": 2,
-            "fieldName": "Gas",
+            "fieldName": "gas",
             "fieldType": "EnCal",
             "fieldValues": "Natural,Butano"
         },

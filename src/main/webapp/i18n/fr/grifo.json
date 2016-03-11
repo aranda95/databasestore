@@ -16,8 +16,8 @@
             "detail": {
                 "title": "Grifo"
             },
-            "Tipo": "Tipo",
-            "Referencia": "Referencia",
+            "tipo": "Tipo",
+            "referencia": "Referencia",
             "cantidad": "Cantidad",
             "comentario": "Comentario",
             "producto": "Producto"

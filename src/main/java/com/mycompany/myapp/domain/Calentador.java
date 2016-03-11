@@ -25,7 +25,7 @@ public class Calentador implements Serializable {
     
     @Enumerated(EnumType.STRING)
     @Column(name = "gas")
-    private EnCal Gas;
+    private EnCal gas;
     
     @Column(name = "litros")
     private Integer litros;
@@ -57,11 +57,11 @@ public class Calentador implements Serializable {
     }
 
     public EnCal getGas() {
-        return Gas;
+        return gas;
     }
     
-    public void setGas(EnCal Gas) {
-        this.Gas = Gas;
+    public void setGas(EnCal gas) {
+        this.gas = gas;
     }
 
     public Integer getLitros() {
@@ -121,7 +121,7 @@ public class Calentador implements Serializable {
         return "Calentador{" +
             "id=" + id +
             ", modelo='" + modelo + "'" +
-            ", Gas='" + Gas + "'" +
+            ", gas='" + gas + "'" +
             ", litros='" + litros + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

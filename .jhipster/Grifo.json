@@ -13,13 +13,13 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "Tipo",
+            "fieldName": "tipo",
             "fieldType": "EnGrif",
             "fieldValues": "Banera,Columnas,Cocina,Monomandos,Varios"
         },
         {
             "fieldId": 2,
-            "fieldName": "Referencia",
+            "fieldName": "referencia",
             "fieldType": "String"
         },
         {

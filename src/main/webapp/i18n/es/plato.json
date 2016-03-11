@@ -3,15 +3,15 @@
         "plato" : {
             "home": {
                 "title": "Platos",
-                "createLabel": "Create a new Plato",
-                "createOrEditLabel": "Create or edit a Plato",
-                "search": "Search for Plato"
+                "createLabel": "Añadir un nuevo Plato de ducha",
+                "createOrEditLabel": "Añadir o editar un Plato",
+                "search": "Buscar un Plato"
             },
-            "created": "A new Plato is created with identifier {{ param }}",
-            "updated": "A Plato is updated with identifier {{ param }}",
-            "deleted": "A Plato is deleted with identifier {{ param }}",
+            "created": "Un nuevo plato ha sido añadido con el identificador {{ param }}",
+            "updated": "Un plato ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un plato ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Plato {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Plato de ducha {{ id }}?"
             },
             "detail": {
                 "title": "Plato"

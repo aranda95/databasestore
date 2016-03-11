@@ -4,20 +4,20 @@
             "home": {
                 "title": "Grifos",
                 "createLabel": "Añadir un nuevo Grifo",
-                "createOrEditLabel": "Añadir o modificar un Grifo",
+                "createOrEditLabel": "Añadir o editar un Grifo",
                 "search": "Buscar un Grifo"
             },
-            "created": "Se ha añadido un nuevo grifo con Id {{ param }}",
-            "updated": "Se ha modificado un grifo con Id {{ param }}",
-            "deleted": "Se ha borrado un grifo con Id{{ param }}",
+            "created": "Un nuevo grifo ha sido añadido con el identificador {{ param }}",
+            "updated": "Un grifo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un grifo ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Estas seguro que quieres borrar el grifo con Id ? {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Grifo {{ id }}?"
             },
             "detail": {
                 "title": "Grifo"
             },
-            "Tipo": "Tipo",
-            "Referencia": "Referencia",
+            "tipo": "Tipo",
+            "referencia": "Referencia",
             "cantidad": "Cantidad",
             "comentario": "Comentario",
             "producto": "Producto"

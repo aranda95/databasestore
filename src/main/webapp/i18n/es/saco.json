@@ -3,15 +3,15 @@
         "saco" : {
             "home": {
                 "title": "Sacos",
-                "createLabel": "Create a new Saco",
-                "createOrEditLabel": "Create or edit a Saco",
-                "search": "Search for Saco"
+                "createLabel": "Añadir un Saco",
+                "createOrEditLabel": "Añadir o modificar un Saco",
+                "search": "Buscar un saco"
             },
-            "created": "A new Saco is created with identifier {{ param }}",
-            "updated": "A Saco is updated with identifier {{ param }}",
-            "deleted": "A Saco is deleted with identifier {{ param }}",
+            "created": "Un nuevo saco ha sido añadido con el identificador {{ param }}",
+            "updated": "Un saco ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un saco ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Saco {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Saco {{ id }}?"
             },
             "detail": {
                 "title": "Saco"

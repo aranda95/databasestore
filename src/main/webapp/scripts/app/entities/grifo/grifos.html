@@ -19,8 +19,8 @@
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="databasestoreApp.grifo.Tipo">Tipo</span></th>
-                    <th><span translate="databasestoreApp.grifo.Referencia">Referencia</span></th>
+                    <th><span translate="databasestoreApp.grifo.tipo">Tipo</span></th>
+                    <th><span translate="databasestoreApp.grifo.referencia">Referencia</span></th>
                     <th><span translate="databasestoreApp.grifo.cantidad">Cantidad</span></th>
                     <th><span translate="databasestoreApp.grifo.comentario">Comentario</span></th>
                     <th><span translate="databasestoreApp.grifo.producto">producto</span></th>
@@ -30,8 +30,8 @@
             <tbody>
                 <tr ng-repeat="grifo in grifos track by grifo.id">
                     <td><a ui-sref="grifo.detail({id:grifo.id})">{{grifo.id}}</a></td>
-                    <td translate="{{'databasestoreApp.EnGrif.' + grifo.Tipo}}">{{grifo.Tipo}}</td>
-                    <td>{{grifo.Referencia}}</td>
+                    <td translate="{{'databasestoreApp.EnGrif.' + grifo.tipo}}">{{grifo.tipo}}</td>
+                    <td>{{grifo.referencia}}</td>
                     <td>{{grifo.cantidad}}</td>
                     <td>{{grifo.comentario}}</td>
                     <td>

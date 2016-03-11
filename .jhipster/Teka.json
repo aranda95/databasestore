@@ -13,7 +13,7 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "Tipo",
+            "fieldName": "tipo",
             "fieldType": "EnTek",
             "fieldValues": "Hornos,Encimeras,Campanas,Fregaderas"
         },

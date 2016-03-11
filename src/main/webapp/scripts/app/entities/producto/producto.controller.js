@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('databasestoreApp')
-    .controller('ProductoController', function ($scope, $state, Producto) {
+    .controller('ProductoController', function ($scope,$state, Producto) {
 
         $scope.productos = [];
         $scope.loadAll = function() {
@@ -16,6 +16,7 @@ angular.module('databasestoreApp')
             $scope.loadAll();
             $scope.clear();
         };
+
 
         $scope.clear = function () {
             $scope.producto = {

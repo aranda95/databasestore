@@ -1,7 +1,8 @@
 {
     "main": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
+        "title": "Welcome, G.Aranda!",
+        "subtitle": "This is your site control Stock",
+        "subbtitle": "To add , delete or search any of its products , display the menu and select Products",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },

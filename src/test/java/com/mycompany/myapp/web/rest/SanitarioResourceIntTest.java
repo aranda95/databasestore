@@ -123,7 +123,7 @@ public class SanitarioResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(sanitario.getId().intValue())))
                 .andExpect(jsonPath("$.[*].modelo").value(hasItem(DEFAULT_MODELO.toString())))
-                .andExpect(jsonPath("$.[*].Salida").value(hasItem(DEFAULT_SALIDA.toString())))
+                .andExpect(jsonPath("$.[*].salida").value(hasItem(DEFAULT_SALIDA.toString())))
                 .andExpect(jsonPath("$.[*].medidas").value(hasItem(DEFAULT_MEDIDAS.toString())))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
@@ -141,7 +141,7 @@ public class SanitarioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(sanitario.getId().intValue()))
             .andExpect(jsonPath("$.modelo").value(DEFAULT_MODELO.toString()))
-            .andExpect(jsonPath("$.Salida").value(DEFAULT_SALIDA.toString()))
+            .andExpect(jsonPath("$.salida").value(DEFAULT_SALIDA.toString()))
             .andExpect(jsonPath("$.medidas").value(DEFAULT_MEDIDAS.toString()))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));

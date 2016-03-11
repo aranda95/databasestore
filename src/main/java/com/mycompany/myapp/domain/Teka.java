@@ -22,7 +22,7 @@ public class Teka implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private EnTek Tipo;
+    private EnTek tipo;
     
     @Column(name = "modelo")
     private String modelo;
@@ -46,11 +46,11 @@ public class Teka implements Serializable {
     }
 
     public EnTek getTipo() {
-        return Tipo;
+        return tipo;
     }
     
-    public void setTipo(EnTek Tipo) {
-        this.Tipo = Tipo;
+    public void setTipo(EnTek tipo) {
+        this.tipo = tipo;
     }
 
     public String getModelo() {
@@ -109,7 +109,7 @@ public class Teka implements Serializable {
     public String toString() {
         return "Teka{" +
             "id=" + id +
-            ", Tipo='" + Tipo + "'" +
+            ", tipo='" + tipo + "'" +
             ", modelo='" + modelo + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +

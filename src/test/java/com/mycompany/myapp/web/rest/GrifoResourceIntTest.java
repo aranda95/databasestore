@@ -118,8 +118,8 @@ public class GrifoResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(grifo.getId().intValue())))
-                .andExpect(jsonPath("$.[*].Tipo").value(hasItem(DEFAULT_TIPO.toString())))
-                .andExpect(jsonPath("$.[*].Referencia").value(hasItem(DEFAULT_REFERENCIA.toString())))
+                .andExpect(jsonPath("$.[*].tipo").value(hasItem(DEFAULT_TIPO.toString())))
+                .andExpect(jsonPath("$.[*].referencia").value(hasItem(DEFAULT_REFERENCIA.toString())))
                 .andExpect(jsonPath("$.[*].cantidad").value(hasItem(DEFAULT_CANTIDAD)))
                 .andExpect(jsonPath("$.[*].comentario").value(hasItem(DEFAULT_COMENTARIO.toString())));
     }
@@ -135,8 +135,8 @@ public class GrifoResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(grifo.getId().intValue()))
-            .andExpect(jsonPath("$.Tipo").value(DEFAULT_TIPO.toString()))
-            .andExpect(jsonPath("$.Referencia").value(DEFAULT_REFERENCIA.toString()))
+            .andExpect(jsonPath("$.tipo").value(DEFAULT_TIPO.toString()))
+            .andExpect(jsonPath("$.referencia").value(DEFAULT_REFERENCIA.toString()))
             .andExpect(jsonPath("$.cantidad").value(DEFAULT_CANTIDAD))
             .andExpect(jsonPath("$.comentario").value(DEFAULT_COMENTARIO.toString()));
     }

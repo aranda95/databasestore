@@ -17,7 +17,7 @@
                 "title": "Calentador"
             },
             "modelo": "Modelo",
-            "Gas": "Gas",
+            "gas": "Gas",
             "litros": "Litros",
             "cantidad": "Cantidad",
             "comentario": "Comentario",

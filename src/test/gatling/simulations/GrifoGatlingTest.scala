@@ -67,7 +67,7 @@ class GrifoGatlingTest extends Simulation {
             .exec(http("Create new grifo")
             .post("/api/grifos")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "Tipo":null, "Referencia":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "tipo":null, "referencia":"SAMPLE_TEXT", "cantidad":"0", "comentario":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_grifo_url")))
             .pause(10)

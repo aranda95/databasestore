@@ -7,9 +7,9 @@
                 "createOrEditLabel": "Añadir o modificar un Azulejo",
                 "search": "Buscar un Azulejo"
             },
-            "created": "Se ha creado un nuevo azulejo con Id {{ param }}",
-            "updated": "Se ha modificado un azulejo con Id {{ param }}",
-            "deleted": "Se ha borrado un azulejo con Id {{ param }}",
+            "created": "Un nuevo azulejo ha sido añadido con el identificador {{ param }}",
+            "updated": "Un azulejo ha sido actualizado con el identificador{{ param }}",
+            "deleted": "Un azulejo ha sido eliminado con el identificador {{ param }}",
             "delete": {
                 "question": "Estas seguro que quieres borrar el azulejo con Id ?{{ id }}?"
             },

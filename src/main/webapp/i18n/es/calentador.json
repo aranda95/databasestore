@@ -4,20 +4,20 @@
             "home": {
                 "title": "Calentadores",
                 "createLabel": "Añadir un nuevo Calentador",
-                "createOrEditLabel": "Añadir o modificar un Calentador",
-                "search": "Buscar un Calentador"
+                "createOrEditLabel": "Añadir o editar un Calentador",
+                "search": "Buscar un calentador"
             },
-            "created": "Se ha creado un nuevo calentador con Id {{ param }}",
-            "updated": "Se ha modificado un calentador con Id {{ param }}",
-            "deleted": "Se ha borrado un calentador con Id  {{ param }}",
+            "created": "Un nuevo calentador ha sido añadido con el identificador {{ param }}",
+            "updated": "Un calentador ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un calentador ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "Estas seguro que quieres borrar el calentador con Id ? {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Calentador {{ id }}?"
             },
             "detail": {
                 "title": "Calentador"
             },
             "modelo": "Modelo",
-            "Gas": "Gas",
+            "gas": "Gas",
             "litros": "Litros",
             "cantidad": "Cantidad",
             "comentario": "Comentario",

@@ -6,7 +6,7 @@
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="calentador.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span
+                    <span 
                         translate="databasestoreApp.calentador.home.createLabel">Create new Calentador
                     </span>
                 </button>
@@ -20,7 +20,7 @@
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="databasestoreApp.calentador.modelo">Modelo</span></th>
-                    <th><span translate="databasestoreApp.calentador.Gas">Gas</span></th>
+                    <th><span translate="databasestoreApp.calentador.gas">Gas</span></th>
                     <th><span translate="databasestoreApp.calentador.litros">Litros</span></th>
                     <th><span translate="databasestoreApp.calentador.cantidad">Cantidad</span></th>
                     <th><span translate="databasestoreApp.calentador.comentario">Comentario</span></th>
@@ -32,7 +32,7 @@
                 <tr ng-repeat="calentador in calentadors track by calentador.id">
                     <td><a ui-sref="calentador.detail({id:calentador.id})">{{calentador.id}}</a></td>
                     <td>{{calentador.modelo}}</td>
-                    <td translate="{{'databasestoreApp.EnCal.' + calentador.Gas}}">{{calentador.Gas}}</td>
+                    <td translate="{{'databasestoreApp.EnCal.' + calentador.gas}}">{{calentador.gas}}</td>
                     <td>{{calentador.litros}}</td>
                     <td>{{calentador.cantidad}}</td>
                     <td>{{calentador.comentario}}</td>
@@ -43,7 +43,7 @@
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
                                     ui-sref="calentador.detail({id:calentador.id})"
-                                    class="btn btn-info btn-sm">
+                                    class="btn btn-info btn-sm"> 
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
                             </button>
@@ -55,7 +55,7 @@
                             </button>
                             <button type="submit"
                                     ui-sref="calentador.delete({id:calentador.id})"
-                                    class="btn btn-danger btn-sm">
+                                    class="btn btn-danger btn-sm">                                    
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
                             </button>

@@ -22,10 +22,10 @@ public class Grifo implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private EnGrif Tipo;
+    private EnGrif tipo;
     
     @Column(name = "referencia")
-    private String Referencia;
+    private String referencia;
     
     @Column(name = "cantidad")
     private Integer cantidad;
@@ -46,19 +46,19 @@ public class Grifo implements Serializable {
     }
 
     public EnGrif getTipo() {
-        return Tipo;
+        return tipo;
     }
     
-    public void setTipo(EnGrif Tipo) {
-        this.Tipo = Tipo;
+    public void setTipo(EnGrif tipo) {
+        this.tipo = tipo;
     }
 
     public String getReferencia() {
-        return Referencia;
+        return referencia;
     }
     
-    public void setReferencia(String Referencia) {
-        this.Referencia = Referencia;
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
     public Integer getCantidad() {
@@ -109,8 +109,8 @@ public class Grifo implements Serializable {
     public String toString() {
         return "Grifo{" +
             "id=" + id +
-            ", Tipo='" + Tipo + "'" +
-            ", Referencia='" + Referencia + "'" +
+            ", tipo='" + tipo + "'" +
+            ", referencia='" + referencia + "'" +
             ", cantidad='" + cantidad + "'" +
             ", comentario='" + comentario + "'" +
             '}';

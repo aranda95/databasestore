@@ -1,3 +1,4 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <div>
     <h2 translate="databasestoreApp.producto.home.title">Productos</h2>
     <jh-alert></jh-alert>
@@ -12,10 +13,11 @@
                 </button>
 
             </div>
+
             <div class="col-md-8" id="buscador">
                 <form name="searchForm" class="form-inline">
                     <div class="form-group">
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                        <input type="text" class="form-control" ng-model="search.descripcion" id="search" placeholder="query">
                     </div>
                     <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Busca un Producto</span>
                     </button>
@@ -38,7 +40,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="producto in productos track by producto.id">
+                <tr ng-repeat="producto in productos | filter:search">
                     <td><a ui-sref="producto.detail({id:producto.id})">{{producto.id}}</a></td>
                     <td>{{producto.descripcion}}</td>
                     <td class="text-right">

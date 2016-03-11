@@ -64,7 +64,7 @@ angular.module('databasestoreApp')
                             entity: function () {
                                 return {
                                     modelo: null,
-                                    Gas: null,
+                                    gas: null,
                                     litros: null,
                                     cantidad: null,
                                     comentario: null,
