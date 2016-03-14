@@ -12,6 +12,7 @@ angular.module('databasestoreApp')
         $scope.loadAll();
 
 
+
         $scope.refresh = function () {
             $scope.loadAll();
             $scope.clear();

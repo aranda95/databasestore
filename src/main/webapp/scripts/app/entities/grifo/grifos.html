@@ -6,10 +6,17 @@
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="grifo.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span 
+                    <span
                         translate="databasestoreApp.grifo.home.createLabel">Create new Grifo
                     </span>
                 </button>
+            </div>
+            <div class="col-md-8" id="buscador">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="search.referencia" id="search" placeholder="Buscador">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -28,7 +35,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="grifo in grifos track by grifo.id">
+                <tr ng-repeat="grifo in grifos | filter:search">
                     <td><a ui-sref="grifo.detail({id:grifo.id})">{{grifo.id}}</a></td>
                     <td translate="{{'databasestoreApp.EnGrif.' + grifo.tipo}}">{{grifo.tipo}}</td>
                     <td>{{grifo.referencia}}</td>
@@ -41,7 +48,7 @@
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
                                     ui-sref="grifo.detail({id:grifo.id})"
-                                    class="btn btn-info btn-sm"> 
+                                    class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
                             </button>
@@ -53,7 +60,7 @@
                             </button>
                             <button type="submit"
                                     ui-sref="grifo.delete({id:grifo.id})"
-                                    class="btn btn-danger btn-sm">                                    
+                                    class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
                             </button>
