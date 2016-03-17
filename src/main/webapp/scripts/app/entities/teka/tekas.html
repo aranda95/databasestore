@@ -14,8 +14,11 @@
             <div class="col-md-8" id="buscador">
                 <form name="searchForm" class="form-inline">
                     <div class="form-group">
-                        <input type="text" class="form-control" ng-model="search.modelo" id="search" placeholder="Buscador">
+                        <input type="text" class="form-control" ng-model="searchalex.modelo" id="searchalex" placeholder="Buscador">
+
                     </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -35,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="teka in tekas | filter:search">
+                <tr ng-repeat="teka in tekas | filter:searchalex">
                     <td><a ui-sref="teka.detail({id:teka.id})">{{teka.id}}</a></td>
                     <td translate="{{'databasestoreApp.EnTek.' + teka.tipo}}">{{teka.tipo}}</td>
                     <td>{{teka.modelo}}</td>

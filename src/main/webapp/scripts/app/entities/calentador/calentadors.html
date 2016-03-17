@@ -12,12 +12,29 @@
                 </button>
             </div>
             <div class="col-md-8" id="buscador">
-                <form name="searchForm" class="form-inline">
-                    <div class="form-group">
+                <p> <img src="assets/images/Botón_azul.svg.png" width="25" height="25">  Selecciona por que caracteristica deseas buscar</p>
 
-                        <input type="text" class="form-control" ng-model="search.$" id="search" placeholder="Buscador">
+                <form name="searchForm" class="form-inline">
+                   <select class="form-control" ng-model="busqueda" ng-change="orden(busqueda)">
+
+
+                       <option value="modelo">Modelo</option>
+                       <option value="gas">Gas</option>
+                       <option value="litros">Litros</option>
+                       <option value="comentario">Comentario</option>
+
+                   </select>
+
+
+                    <div class="form-group">
+                        <input type="text" ng-if="tipo=='gas'" class="form-control" ng-model="search.gas" ng-change="actualizar()" id="searchgas" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='modelo'" class="form-control" ng-model="search.modelo" id="searchmodelo" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='litros'" class="form-control" ng-model="search.litros" id="searchlitros" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='comentario'" class="form-control" ng-model="search.comentario" id="searchcomentario" placeholder="Buscador">
                     </div>
 
+                    <button class="btn btn-info" ><span class="glyphicon glyphicon-search"></span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -38,7 +55,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="calentador in calentadors |filter:search">
+                <tr ng-repeat="calentador in calentadors  | filter:search">
                     <td><a ui-sref="calentador.detail({id:calentador.id})">{{calentador.id}}</a></td>
                     <td>{{calentador.modelo}}</td>
                     <td translate="{{'databasestoreApp.EnCal.' + calentador.gas}}">{{calentador.gas}}</td>
