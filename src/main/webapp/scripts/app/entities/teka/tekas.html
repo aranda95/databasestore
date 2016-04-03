@@ -12,12 +12,25 @@
                 </button>
             </div>
             <div class="col-md-8" id="buscador">
-                <form name="searchForm" class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="searchalex.modelo" id="searchalex" placeholder="Buscador">
+                <p> <img src="assets/images/Botón_azul.svg.png" width="25" height="25">  Selecciona por que caracteristica deseas buscar</p>
 
+                <form name="searchForm" class="form-inline">
+                    <select class="form-control" ng-model="busqueda" ng-change="orden(busqueda)">
+
+                        <option value="tipo">Tipo</option>
+                        <option value="modelo">Modelo</option>
+                        <option value="comentario">Comentario</option>
+
+                    </select>
+
+
+                    <div class="form-group">
+                        <input type="text" ng-if="tipo=='tipo'" class="form-control" ng-model="search.tipo" ng-change="actualizar()" id="searchtipo" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='modelo'" class="form-control" ng-model="search.modelo" id="searchmodelo" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='comentario'" class="form-control" ng-model="search.comentario" id="searchcomentario" placeholder="Buscador">
                     </div>
-                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span>
+
+                    <button class="btn btn-info" ><span class="glyphicon glyphicon-search"></span>
                     </button>
                 </form>
             </div>
@@ -38,7 +51,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="teka in tekas | filter:searchalex">
+                <tr ng-repeat="teka in tekas | filter:search">
                     <td><a ui-sref="teka.detail({id:teka.id})">{{teka.id}}</a></td>
                     <td translate="{{'databasestoreApp.EnTek.' + teka.tipo}}">{{teka.tipo}}</td>
                     <td>{{teka.modelo}}</td>

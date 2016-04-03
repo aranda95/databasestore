@@ -12,11 +12,27 @@
                 </button>
             </div>
             <div class="col-md-8" id="buscador">
+                <p> <img src="assets/images/Botón_azul.svg.png" width="25" height="25">  Selecciona por que caracteristica deseas buscar</p>
+
                 <form name="searchForm" class="form-inline">
+                    <select class="form-control" ng-model="busqueda" ng-change="orden(busqueda)">
+
+
+                        <option value="marca">Marca</option>
+                        <option value="m2">M2</option>
+                        <option value="comentario">Comentario</option>
+
+                    </select>
+
+
                     <div class="form-group">
-                        <input type="text" class="form-control" ng-model="search.marca" id="search" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='marca'" class="form-control" ng-model="search.marca" ng-change="actualizar()" id="searchmarca" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='m2'" class="form-control" ng-model="search.m2" id="searchm2" placeholder="Buscador">
+                        <input type="text" ng-if="tipo=='comentario'" class="form-control" ng-model="search.comentario" id="searchcomentario" placeholder="Buscador">
                     </div>
 
+                    <button class="btn btn-info" ><span class="glyphicon glyphicon-search"></span>
+                    </button>
                 </form>
             </div>
         </div>

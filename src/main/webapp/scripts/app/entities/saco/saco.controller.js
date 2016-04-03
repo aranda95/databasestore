@@ -25,4 +25,17 @@ angular.module('databasestoreApp')
                 id: null
             };
         };
+        $scope.orden = function(x){
+            console.log(x);
+            $scope.tipo = x;
+
+        };
+
+        $scope.actualizar = function(){
+            console.log($scope.search);
+        }
+
+        $scope.search ={
+
+        };
     });
