@@ -1,0 +1,11 @@
+{
+    "databasestoreApp": {
+        "Seleccion" : {
+            "null": "",
+            "Hornos": "Hornos",
+            "Encimeras": "Encimeras",
+            "Campanas": "Campanas",
+            "Fregaderas": "Fregaderas"
+        }
+    }
+}

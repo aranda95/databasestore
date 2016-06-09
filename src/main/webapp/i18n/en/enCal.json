@@ -1,0 +1,9 @@
+{
+    "databasestoreApp": {
+        "EnCal" : {
+            "null": "",
+            "Natural": "Natural",
+            "Butano": "Butano"
+        }
+    }
+}

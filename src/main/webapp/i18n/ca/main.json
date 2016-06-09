@@ -1,0 +1,17 @@
+{
+    "main": {
+        "title": "Benvingut, G.Aranda!",
+        "subtitle": "Aquesta és la seva página de control de Stock",
+        "subbtitle": "Per agregar, eliminar o buscar cualsevol dels seus productes , despliegue el menú y seleccioni els productes",
+        "question": "Si tens qualsevol pregunta sobre JHipster:",
+        "link": {
+            "homepage": "Pàgina preincipal de JHipster",
+            "stackoverflow": "JHipster a Stack Overflow",
+            "bugtracker": "JHipster seguiment d'incidencies",
+            "chat": "JHipster public chat room",
+            "contact": "Contacte @java_hipster a Twitter"
+        },
+        "like": "Si li agrada JHipster, no oblidi donar-nos una estrella",
+        "github": "Github"
+    }
+}

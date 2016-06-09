@@ -1,0 +1,9 @@
+{
+    "databasestoreApp": {
+        "EnSan" : {
+            "null": "",
+            "Horizontal": "Horizontal",
+            "Vertical": "Vertical"
+        }
+    }
+}
