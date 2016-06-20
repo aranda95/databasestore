@@ -7,14 +7,14 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Productos",
-                "producto": "Producto",
-                "calentador": "Calentador",
+                "producto": "Productos",
+                "calentador": "Calentadores",
                 "teka": "Teka",
-                "sanitario": "Sanitario",
-                "azulejo": "Azulejo",
-                "plato": "Plato",
-                "saco": "Saco",
-                "grifo": "Grifo",
+                "sanitario": "Sanitarios",
+                "azulejo": "Azulejos",
+                "plato": "Platos",
+                "saco": "Sacos",
+                "grifo": "Grifos",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
